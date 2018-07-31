@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>HTML, CSS 요약(사내공유용) - windfanta.github.io/blog/</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com"><span>Github</span></a></li><li><a href="https://www.v2ex.com/"><span>V2EX</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">HTML, CSS 요약(사내공유용)</h1><ul class="meta"><li><i class="icon icon-author"></i>SUNGMIN SHIN</li><li><i class="icon icon-clock"></i>9 Minutes</li><li><i class="icon icon-calendar"></i>2018년 3월 30일</li></ul></div></div><div class="article-content" style="max-width:800px"><h1 id="HTML-CSS"><a href="#HTML-CSS" class="headerlink" title="HTML, CSS"></a>HTML, CSS</h1><p><br></p>
+<h2 id="CSS-BOX-MODEL"><a href="#CSS-BOX-MODEL" class="headerlink" title="CSS BOX-MODEL"></a><a href="https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model" target="_blank" rel="noopener">CSS BOX-MODEL</a></h2><hr>
+<p><strong>HTML문서에서 각 엘리먼트(요소)는 사각형 박스로 나타냅니다.</strong></p>
+<p>CSS에서 이 사각형 박스는 각각 표준 박스 모델을 사용하여 기술 됩니다. 각 박스는 4가지의 경계가 있습니다.</p>
+<ul>
+<li>margin 경계</li>
+<li>border 경계</li>
+<li>padding 경계</li>
+<li>content 경계</li>
+</ul>
+<p><img src="https://mdn.mozillademos.org/files/8685/boxmodel-(3" alt="CSS 박스모델"></p>
+<p><br></p>
+<p><strong>마진 상쇄(margin-collapsing)</strong></p>
+<p>CSS에서 margin 값이 겹치는 요소가 존재하는 경우 top, bottom에 한해 겹치는 영역의 높은 값 1가지만 적용되는 현상</p>
+<iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/SUNGMIN_SHIN/zq5mwxyp/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe>
+<blockquote>
+<p>참고 - [CSS] 마진 상쇄 현상(margin collapsing)의 이해와 해결<br><a href="http://blog.danggun.net/4276" target="_blank" rel="noopener">http://blog.danggun.net/4276</a></p>
+</blockquote>
+<p><br><br><br></p>
+<h2 id="CSS-레이아웃"><a href="#CSS-레이아웃" class="headerlink" title="CSS 레이아웃"></a>CSS 레이아웃</h2><hr>
+<p>CSS 레이아웃을 배웁시다<br>(<a href="http://ko.learnlayout.com/no-layout.html" target="_blank" rel="noopener">http://ko.learnlayout.com/no-layout.html</a>)</p>
+<p>flex의 예<br><iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/SUNGMIN_SHIN/69ak4953/1/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<blockquote>
+<p>참고1&gt; CSS Flex 속성<br><a href="http://webdir.tistory.com/349" target="_blank" rel="noopener">http://webdir.tistory.com/349</a></p>
+</blockquote>
+<blockquote>
+<p>참고2&gt; Flexbox 이해: 당신이 알아야 할 모든 것<br><a href="https://www.vobour.com/1-flexbox-%EC%9D%B4%ED%95%B4-%EB%8B%B9%EC%8B%A0%EC%9D%B4-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-%EB%AA%A8%EB%93%A0-%EA%B2%83-understa" target="_blank" rel="noopener">https://www.vobour.com/1-flexbox-%EC%9D%B4%ED%95%B4-%EB%8B%B9%EC%8B%A0%EC%9D%B4-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-%EB%AA%A8%EB%93%A0-%EA%B2%83-understa</a></p>
+</blockquote>
+<p><br></p>
+<h2 id="CSS-선택자"><a href="#CSS-선택자" class="headerlink" title="CSS 선택자"></a>CSS 선택자</h2><hr>
+<p>CSS3 Selector - Styling 대상을 특정하는 셀렉터<br>(<a href="http://poiemaweb.com/css3-selector" target="_blank" rel="noopener">http://poiemaweb.com/css3-selector</a>)</p>
+<p><br></p>
+<h2 id="CSS-3-개요"><a href="#CSS-3-개요" class="headerlink" title="CSS 3 개요"></a>CSS 3 개요</h2><hr>
+<p>CSS의 뒤에 붙는 숫자는 CSS Level뒤에 붙는 숫자를 줄여서 표현한 것으로 CSS Level2는 2011년 6월에 권장 단계에 이르게 됨(이때까지 9년이 걸림)<br>CSS3(level 3)는 CSS 2.1을 상속하는 것을 목표로 하며 다중열(multi-columns), 유동적인 상자(flexible box), 격자 배치(grid layouts) 뿐만 아니라 둥그런 모서리(rounded corners), 그림자( shadows) , 부드러운 색의 변이(gradients) , 변이(transitions), 움직임(animations) 등도 지원합니다.</p>
+<p><br></p>
+<h3 id="상속"><a href="#상속" class="headerlink" title="상속"></a>상속</h3><p>(<a href="http://poiemaweb.com/css3-inheritance-cascading" target="_blank" rel="noopener">http://poiemaweb.com/css3-inheritance-cascading</a>)</p>
+<p><br></p>
+<h3 id="단위"><a href="#단위" class="headerlink" title="단위"></a>단위</h3><p>(<a href="http://poiemaweb.com/css3-units" target="_blank" rel="noopener">http://poiemaweb.com/css3-units</a>)</p>
+<blockquote>
+<p>당신은 모를 수도 있는 CSS의 7가지 단위<br><a href="https://webdesign.tutsplus.com/ko/articles/7-css-units-you-might-not-know-about--cms-22573" target="_blank" rel="noopener">https://webdesign.tutsplus.com/ko/articles/7-css-units-you-might-not-know-about--cms-22573</a></p>
+</blockquote>
+<p><br></p>
+<h3 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h3><p>(<a href="http://poiemaweb.com/css3-transition" target="_blank" rel="noopener">http://poiemaweb.com/css3-transition</a>)</p>
+<blockquote>
+<p>같이 볼만한 글<br><a href="https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions</a></p>
+</blockquote>
+<p><br></p>
+<h3 id="Gradient"><a href="#Gradient" class="headerlink" title="Gradient"></a>Gradient</h3><p>(<a href="http://poiemaweb.com/css3-gradient" target="_blank" rel="noopener">http://poiemaweb.com/css3-gradient</a>)</p>
+<p><br></p>
+<h3 id="css3-animation"><a href="#css3-animation" class="headerlink" title="css3-animation"></a>css3-animation</h3><p>(<a href="http://poiemaweb.com/css3-animation" target="_blank" rel="noopener">http://poiemaweb.com/css3-animation</a>)</p>
+<blockquote>
+<p>같이 볼만한 글<br><a href="http://www.beautifulcss.com/archives/272" target="_blank" rel="noopener">http://www.beautifulcss.com/archives/272</a></p>
+</blockquote>
+<p><br></p>
+<h3 id="CSS-애니메이션-성능-개선-방법"><a href="#CSS-애니메이션-성능-개선-방법" class="headerlink" title="CSS 애니메이션 성능 개선 방법"></a>CSS 애니메이션 성능 개선 방법</h3><p>(<a href="http://wit.nts-corp.com/2017/06/05/4571" target="_blank" rel="noopener">http://wit.nts-corp.com/2017/06/05/4571</a>)</p>
+<p><br></p>
+<blockquote>
+<p>참고 - MDN CSS Reference(브라우저 호환성 확인)<br><a href="https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Reference#%EC%84%A0%ED%83%9D%EC%9E%90" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Reference#%EC%84%A0%ED%83%9D%EC%9E%90</a></p>
+</blockquote>
+<p><br><br><br></p>
+<h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><hr>
+<blockquote>
+<p><strong>HTML5 설명(<a href="https://namu.wiki/w/HTML5" target="_blank" rel="noopener">https://namu.wiki/w/HTML5</a>)</strong><br>HTML5라고 불리우는 개념은 단순히 웹 문서를 작성할 때 사용되는 <strong>마크업 랭귀지(HTML)의 문법적(syntactic) 버전 뿐만 아니라 새로운 DOM API 스펙을 포함하는 것</strong><br>문법면에서는 이전에 비해 상당히 간결하고 명확해 졌다. XHTML에 있던 XML 문법도 모두 제거되어 HTML 4.01의 방식으로 돌아갔다.<br>또한 이전에는 JavaScript를 사용해서 엄청나게 긴 코드를 써서 간접적으로 구현해야 했던 기능들이 정식 엘리먼트(video, audio등)로 편입됨으로서 간단하게 구현해낼 수 있게 되었으며 불필요하게 길게 적어야했던 이전 버전에서 꼭 필요한 부분만 남기도록 바뀌는 등 여러가지 개선점이 생겼다.<br>API면에서, HTML5에서는 비디오 및 오디오와 같은 미디어 엘리먼트에 대한 API뿐를 포함해 오프라인 웹 앱 구현, 문서 편집 등과 같은 다양한 기능에 대한 API가 추가되었으며, WHATWG에 의해 Geolocation, Web SQL, File API, Audio API등이 “Living standard”로 권고되고 있다.  HTML5에서의 변화 (W3C)  WHATWG 스펙 이를 통해 이전에는 플래시, 실버라이트 등의 외부 플러그인을 통해서만 지원할 수 있던 클라이언트 사이드에서의 사용자 인터페이스를 위한 기능들의 상당수를 브라우저 자체의 기능을 이용해 구현할 수 있게 되었다.<br>이런 API들은 사실상의 브라우저 표준 스크립트 언어인 JavaScript(이론적으로는 다른 스크립트 언어라도 관계없다. 브라우저가 지원한다면 말이지만…)를 통해 이용할 수 있다. 이 때문에 HTML5는 마크업 언어라고만 보기는 더 이상 힘들어졌다. 단, HTML5 그 자체만으로 모든 것이 된다는 오해는 삼가자. HTML5 그 자체가 제공하는 것은 문서 구조와 API이고, 이걸 API와 연결시켜 실제 동작을 구현하는 것은 JavaScript라는 언어로, 이 둘은 엄연히 별개의 것이다. HTML5와 JavaScript가 서로 연결되어 돌아가는 개념이지, HTML5 안에 JavaScript가 포함되는 것이 절대로 아니다. 단적으로, JavaScript는 ECMAScript라는 표준안이 따로 나오는 별도의 프로그래밍 언어이다.<br>인터넷 익스플로러는 9부터 일부 태그를 지원하기 시작했고, 10에서 거의 대부분 지원한다. 8 이하를 지원하려면 html5shiv.js[1]라는 JavaScript를 이용하면 된다. 단 이 경우 JavaScript를 사용하기에 페이지 렌더링 속도가 느려진다는 단점이 있다. 그리고 위의 브라우저 API를 이용하는 기능들은 사용이 불가능하다. 이 JavaScript가 대체하는 것은 HTML5의 마크업 뿐이기 때문이다. </p>
+</blockquote>
+<blockquote>
+<p>API<br><a href="https://ko.wikipedia.org/wiki/API" target="_blank" rel="noopener">https://ko.wikipedia.org/wiki/API</a></p>
+</blockquote>
+<blockquote>
+<p>WHATWG(웹 하이퍼텍스트 애플리케이션 테크놀로지 워킹 그룹)<br><a href="https://ko.wikipedia.org/wiki/WHATWG" target="_blank" rel="noopener">https://ko.wikipedia.org/wiki/WHATWG</a></p>
+</blockquote>
+<p><br></p>
+<h3 id="HTML5-소개"><a href="#HTML5-소개" class="headerlink" title="HTML5 소개"></a>HTML5 소개</h3><p>(<a href="http://poiemaweb.com/html5-syntax" target="_blank" rel="noopener">http://poiemaweb.com/html5-syntax</a>)</p>
+<p><br></p>
+<h3 id="시멘틱-웹"><a href="#시멘틱-웹" class="headerlink" title="시멘틱 웹"></a>시멘틱 웹</h3><p>(<a href="http://poiemaweb.com/html5-semantic-web" target="_blank" rel="noopener">http://poiemaweb.com/html5-semantic-web</a>)</p>
+<p><br></p>
+<h3 id="form"><a href="#form" class="headerlink" title="form"></a>form</h3><p>(<a href="http://poiemaweb.com/html5-tag-forms" target="_blank" rel="noopener">http://poiemaweb.com/html5-tag-forms</a>)</p>
+<p><br></p>
+<h3 id="시맨틱한-HTML5-마크업-구조-설계-어떻게-할까"><a href="#시맨틱한-HTML5-마크업-구조-설계-어떻게-할까" class="headerlink" title="시맨틱한 HTML5 마크업 구조 설계, 어떻게 할까?"></a>시맨틱한 HTML5 마크업 구조 설계, 어떻게 할까?</h3><p>(<a href="https://www.slideshare.net/NULINTS/2014-html5" target="_blank" rel="noopener">https://www.slideshare.net/NULINTS/2014-html5</a>)</p>
+</div><div class="article-meta" style="max-width:800px"><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/">study</a><span class="category-list-count">37</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/CSS/">CSS</a><span class="category-list-count">1</span></li></ul></li></ul></div></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjk924ug70003awwc9df4t3bt" data-title="HTML, CSS 요약(사내공유용)" data-url="http://windfanta.github.io/blog/blog/2018/03/30/study-css/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/blog/2018/04/03/study-jquery-12/"><i class="icon icon-arror-left"></i></a></li><li><a href="/blog/2018/03/22/study-jquery-11/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/BoizZ" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="https://weibo.com/heqibang" title="Weibo" target="_blank"><i class="icon icon-weibo"></i></a></li><li><a href="https://www.segmentfault.com/u/bon" title="SegmentFault" target="_blank"><i class="icon icon-segmentfault"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 windfanta.github.io/blog/<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>

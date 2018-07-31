@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>(vue.js) - 05 상호작용 - windfanta.github.io/blog/</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com"><span>Github</span></a></li><li><a href="https://www.v2ex.com/"><span>V2EX</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">(vue.js) - 05 상호작용</h1><ul class="meta"><li><i class="icon icon-author"></i>SUNGMIN SHIN</li><li><i class="icon icon-clock"></i>11 Minutes</li><li><i class="icon icon-calendar"></i>2017년 10월 17일</li></ul></div></div><div class="article-content" style="max-width:800px"><hr>
+<h1 id="Vue-js-2-프로그래밍"><a href="#Vue-js-2-프로그래밍" class="headerlink" title="[ Vue.js 2 프로그래밍  ]"></a>[ Vue.js 2 프로그래밍  ]</h1><p>(<a href="http://book.naver.com/bookdb/book_detail.nhn?bid=12320270" target="_blank" rel="noopener">http://book.naver.com/bookdb/book_detail.nhn?bid=12320270</a>)</p>
+<hr>
+<p><br></p>
+<h1 id="5-상호-작용"><a href="#5-상호-작용" class="headerlink" title="5. 상호 작용"></a>5. 상호 작용</h1><p><br></p>
+<h2 id="5-1-이벤트-처리"><a href="#5-1-이벤트-처리" class="headerlink" title="5.1 이벤트 처리"></a>5.1 이벤트 처리</h2><hr>
+<p>HTML 이벤트는 DOM엘리먼트에서 일어납니다. HTML 페이지에서 vue.js를 사용하면 vue.js가 이러한 이벤트에 반응(react) 합니다.</p>
+<p>이벤트는 기본적인 사용자 상호작용에서 랜더링 모델에서 일어나는 일에 이르기까지 모든 것을 나타낼 수 있습니다.</p>
+<blockquote>
+<p>HTML이벤트의 예</p>
+<ul>
+<li>웹페이지가 완전히 로드됨</li>
+<li>입력 폼이 변경됨</li>
+<li>버튼이 클릭됨</li>
+<li>폼이 제출됨</li>
+</ul>
+</blockquote>
+<p>이벤트 처리의 핵심은 이벤트가 발생할 때마다 무언가를 할 수 있다는 것입니다. <strong>vue.js에서 DOM이벤트를 청취(listen)하려면 v-on 디렉티브를 사용하면 됩니다</strong>.<br>v-on 디렉티브를 이벤트 리스너를 엘리먼트에 붙입니다. 이벤트 유형은 이자로 표시하며 아래와 같이 사용할 수 있습니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"num++"</span>&gt;</span>더하기<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="5-1-1-인라인-이벤트-핸들링"><a href="#5-1-1-인라인-이벤트-핸들링" class="headerlink" title="5.1.1 인라인 이벤트 핸들링"></a>5.1.1 인라인 이벤트 핸들링</h2><hr>
+<p>[ 인라인 이벤트 핸들링 예제 ]<br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/wfq02tcj/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><br></p>
+<h2 id="5-1-2-메서드를-이용한-이벤트-처리"><a href="#5-1-2-메서드를-이용한-이벤트-처리" class="headerlink" title="5.1.2 메서드를 이용한 이벤트 처리"></a>5.1.2 메서드를 이용한 이벤트 처리</h2><hr>
+<p>5.1.1의 예제와 동일한 작업을 메서드를 이용해서 처리해보겠습니다. vue.js에서 메서드는 특정 작업을 수행하도록 설계된 코드 블록으로 메서드를 실행하려면 먼서 메서드(methods)를 정의한 다음 호출해야 합니다.</p>
+<iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/nwft3uLy/2/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe>
+<p>기능은 이전과 동일하지만 코드를 읽을 때 명확하며 이해하기 쉬워졌습니다.</p>
+<p><br></p>
+<h2 id="5-1-3-v-on의-축약형"><a href="#5-1-3-v-on의-축약형" class="headerlink" title="5.1.3 v-on의 축약형"></a>5.1.3 v-on의 축약형</h2><hr>
+<p>프로젝트에서 매번 v-on을 사용하고 있다면 html이 금방 지저분해질 것입니다. 고맙게도 v-on의 축약형인 @기호가 존재합니다. @은 v-on:을 대체하며 코드를 훨씬 깔끔하게 만들어 줄 것입니다.</p>
+<p>[ v-on:click을 이용한 click이벤트 청취 ]<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"upvote"</span>&gt;</span></span><br><span class="line">  upvote! &#123;&#123;upvotes&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>[ 축약형을 이용한 click이벤트 청취 ]<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"upvote"</span>&gt;</span></span><br><span class="line">  upvote! &#123;&#123;upvotes&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><br></p>
+<h2 id="5-2-이벤트-한정자"><a href="#5-2-이벤트-한정자" class="headerlink" title="5.2 이벤트 한정자"></a>5.2 이벤트 한정자</h2><hr>
+<iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/ud0upL9g/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe>
+<p>위 예제를 실행해보면 더하기 버튼을 클릭했을 때 계산을 수행하는 대신 페이지를 다시 로드합니다(jsfiddle에선 그렇게 되지 않지만) 이렇게 되는 이유는 버튼을 클릭하면 폼을 제출하고 페이지가 다시 로드되기 때문 입니다.<br>(예제에서의 button 엘리먼트의 type 속성이 submit이기 때문에 )</p>
+<p>폼 제출을 막으려면 이벤트의 기본동작을 취소해야합니다.</p>
+<p>[ preventDefault를 사용하여 기본 동작을 중지 ]<br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/rf0mo49b/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p>위와 같이 메서드 안에서 처리할 수도 있지만 vue.js에서는 이벤트에 대한 기본 동작을 방지하기 위해 v-on에 대해 4가지 이벤트 한정자를 제공합니다.</p>
+<blockquote>
+<p>vue.js의 이벤트 한정자</p>
+<ul>
+<li>prevent</li>
+<li>stop</li>
+<li>capture</li>
+<li>self</li>
+</ul>
+</blockquote>
+<p>[ 이벤트 한정자를 활용한 기본동작 중지 ]<br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/we1Lm9eu/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><br></p>
+<h2 id="5-3-키-한정자"><a href="#5-3-키-한정자" class="headerlink" title="5.3 키 한정자"></a>5.3 키 한정자</h2><hr>
+<p>입력 엘리먼트 중 하나에 포커스를 주고 엔터키를 누르면 버튼의 메서드가 호출되는 데 폼에 버튼이 없거나 버튼이 전혀 없는 경우에는 키보드 이벤트를 대신 청취할 수도 있습니다.</p>
+<p>키보드 이벤트를 청취할 때는 키 코드를 확인해야할 때가 많습니다. 엔터 키의 코드는 13이고 엔터키 이벤트를 청취해야한다면 아래와 같이 사용할 수 있습니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"a"</span> @<span class="attr">keyup.13</span>=<span class="string">"add"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>vue.js에서는 일반적으로 사용하는 키에 대해서 별칭을 제공하여 키코드를 외우지 않아도 편리하게 사용할 수 있게 해줍니다.</p>
+<blockquote>
+<p>vue.js의 키 별칭</p>
+<ul>
+<li>enter</li>
+<li>tab</li>
+<li>delete</li>
+<li>esc</li>
+<li>space</li>
+<li>up</li>
+<li>down</li>
+<li>left</li>
+<li>right</li>
+</ul>
+</blockquote>
+<p>위의 예시를 키 별칭을 사용하여 변경한다면 아래와 같습니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">"a"</span> @<span class="attr">keyup.enter</span>=<span class="string">"add"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong> 폼에 입력 및 버튼등이 많고 기본 제출 동작을 방지해야 한다면 폼의 submit 이벤트를 수정해도 됩니다. </strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> @<span class="attr">submit.prevent</span>=<span class="string">"calculator"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="5-4-계산된-프로퍼티-computed-properties"><a href="#5-4-계산된-프로퍼티-computed-properties" class="headerlink" title="5.4 계산된 프로퍼티(computed properties)"></a>5.4 계산된 프로퍼티(computed properties)</h2><hr>
+<p>vue.js의 인라인표현식은 매우 편리하지만 로직이 복잡해지면 계산된 프로퍼티(computed properties)를 사용해야 합니다.<br><strong> 계산된 프로퍼티란 다른 요인에 따라 값이 바뀌는 변수 입니다. </strong><br>객체 프로퍼티로 사용할 수 있는 함수퍼럼 작동하는 데 큰 차이점은 계산된 프로퍼티가 의존하는 요소가 변경될 때마다 계산된 프로퍼티의 값은 다시 평가 된다는 것입니다.</p>
+<p>계산된 프로퍼티는 vue인스턴스 안에 computed객체에 정의하여 사용할 수 있습니다.</p>
+<p>[ computed 객체의 사용 예 ]<br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/yuaoy1ku/1/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p>입력 받는 값이 반드시 숫자여야 하는 경우에는 속성 내부에 parseFloat등을 통해 값을 제어할 수도 있지만 vue에서는 더 편리하게 사용할 수 있도록 number한정자를 제공합니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model.number</span>=<span class="string">"a"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>이 외에도 input의 type이 number인 경우에도 값을 숫자로 받을 수 있습니다.</p>
+<p>[ 숫자를 입력받는 경우의 예 ]<br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/vuxg2gqd/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><br></p>
+<h2 id="연습문제"><a href="#연습문제" class="headerlink" title="연습문제"></a>연습문제</h2><hr>
+<iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/mt6nt0f7/3/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe>
+<p><br></p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><hr>
+<h2 id="이벤트처리"><a href="#이벤트처리" class="headerlink" title="이벤트처리"></a>이벤트처리</h2><blockquote>
+<ul>
+<li>HTML이벤트는 DOM엘리먼트에서 일어나며 vue.js를 사용하면 이러한 이벤트에 반응</li>
+<li>이벤트는 기본적인 상호작용부터 랜더링모델에서 일어나는 일까지 모든 것을 나타낼 수 있음</li>
+<li>vue에서 이벤트를 청취는 <strong>v-on 디렉티브</strong>를 사용</li>
+</ul>
+</blockquote>
+<p><br></p>
+<h2 id="메서드를-이용한-이벤트-처리"><a href="#메서드를-이용한-이벤트-처리" class="headerlink" title="메서드를 이용한 이벤트 처리"></a>메서드를 이용한 이벤트 처리</h2><blockquote>
+<ul>
+<li>메서드를 이용하기 위해서는 methods를 정의한 다음에 호출 합니다.</li>
+<li>메서드의 기능 및 구현에는 여러가지 방법으로 할 수 있지만 methods를 정의하여 사용하면 읽기 쉽고 명확해집니다.</li>
+</ul>
+</blockquote>
+<p><br></p>
+<h2 id="메서드를-이용한-이벤트-처리-1"><a href="#메서드를-이용한-이벤트-처리-1" class="headerlink" title="메서드를 이용한 이벤트 처리"></a>메서드를 이용한 이벤트 처리</h2><blockquote>
+<ul>
+<li>메서드를 이용하기 위해서는 methods를 정의한 다음에 호출 합니다.</li>
+</ul>
+</blockquote>
+<p><br></p>
+<h2 id="v-on의-축약표현"><a href="#v-on의-축약표현" class="headerlink" title="v-on의 축약표현"></a>v-on의 축약표현</h2><blockquote>
+<ul>
+<li>v-on 디렉티브는 기호 @를 통해 축약하여 표현할 수 있습니다<br>( v-on:click=”result” -&gt; @click=”result” )</li>
+</ul>
+</blockquote>
+<p><br></p>
+<h2 id="이벤트-한정자"><a href="#이벤트-한정자" class="headerlink" title="이벤트 한정자"></a>이벤트 한정자</h2><blockquote>
+<ul>
+<li>vue.js에서는 이벤트에 대한 기본동작을 방지하기 위해 4가지 이벤트 한정자를 제공<br>( prevent, stop, capture, self )</li>
+</ul>
+</blockquote>
+<p><br></p>
+<h2 id="키-이벤트-한정자"><a href="#키-이벤트-한정자" class="headerlink" title="키(이벤트) 한정자"></a>키(이벤트) 한정자</h2><blockquote>
+<ul>
+<li>vue.js에서는 키보드 이벤트에 대한 제어를 위해 두가지 방식의 한정자를 제공합니다.</li>
+<li>키 코드번호를 통한 한정자 (EX&gt; keyup.13=”add”)</li>
+<li>키 별칭을 통한 한정자(상단 참고)</li>
+</ul>
+</blockquote>
+<p><br></p>
+<h2 id="계산된-프로퍼티-computed-properties"><a href="#계산된-프로퍼티-computed-properties" class="headerlink" title="계산된 프로퍼티(computed properties)"></a>계산된 프로퍼티(computed properties)</h2><blockquote>
+<ul>
+<li>계산된 프로퍼티란 다른 요인에 따라 값이 바뀌는 변수를 말함</li>
+<li>vue.js에서 제공하는 인라인 표현식은 매우 편리하지만 복잡하게 사용하면 관리가 어려워질 수 있음</li>
+<li>computed 객체를 통해 사용</li>
+</ul>
+</blockquote>
+</div><div class="article-meta" style="max-width:800px"><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/">study</a><span class="category-list-count">37</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/vue-js/">vue.js</a><span class="category-list-count">6</span></li></ul></li></ul></div></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjk924uhi001vawwc7c5wfisx" data-title="(vue.js) - 05 상호작용" data-url="http://windfanta.github.io/blog/blog/2017/10/17/study-vue-5/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/blog/2017/11/22/study-es6-17/"><i class="icon icon-arror-left"></i></a></li><li><a href="/blog/2017/10/17/study-vue-4/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/BoizZ" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="https://weibo.com/heqibang" title="Weibo" target="_blank"><i class="icon icon-weibo"></i></a></li><li><a href="https://www.segmentfault.com/u/bon" title="SegmentFault" target="_blank"><i class="icon icon-segmentfault"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 windfanta.github.io/blog/<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>

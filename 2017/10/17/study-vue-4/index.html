@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>(vue.js) - 04 리스트 랜더링 - windfanta.github.io/blog/</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com"><span>Github</span></a></li><li><a href="https://www.v2ex.com/"><span>V2EX</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">(vue.js) - 04 리스트 랜더링</h1><ul class="meta"><li><i class="icon icon-author"></i>SUNGMIN SHIN</li><li><i class="icon icon-clock"></i>3 Minutes</li><li><i class="icon icon-calendar"></i>2017년 10월 17일</li></ul></div></div><div class="article-content" style="max-width:800px"><hr>
+<h1 id="Vue-js-2-프로그래밍"><a href="#Vue-js-2-프로그래밍" class="headerlink" title="[ Vue.js 2 프로그래밍  ]"></a>[ Vue.js 2 프로그래밍  ]</h1><p>(<a href="http://book.naver.com/bookdb/book_detail.nhn?bid=12320270" target="_blank" rel="noopener">http://book.naver.com/bookdb/book_detail.nhn?bid=12320270</a>)</p>
+<hr>
+<p><br></p>
+<h1 id="4-리스트-랜더링"><a href="#4-리스트-랜더링" class="headerlink" title="4. 리스트 랜더링"></a>4. 리스트 랜더링</h1><p><br></p>
+<h2 id="4-2-v-for"><a href="#4-2-v-for" class="headerlink" title="4.2 v-for"></a>4.2 v-for</h2><hr>
+<p>배열의 각 항목을 순회하기 위해 v-for 디렉티브를 사용합니다. 이 디렉티브는 item in array 형태의 특수 구문이 필요한데 여기서 array는 원본 데이터 배열이고 item은 순회되는 배열 엘리먼트의 별칭입니다.</p>
+<h3 id="4-2-1-범위를-가진-v-for"><a href="#4-2-1-범위를-가진-v-for" class="headerlink" title="4.2.1 범위를 가진 v-for"></a>4.2.1 범위를 가진 v-for</h3><p>v-for 디렉티브는 정수를 받을 수도 있는데 배열/객체 대신 숫자가 전달되면 템플릿이 지정된 수만큼 반복됩니다.</p>
+<iframe scrolling="no" width="100%" height="350px" src="//jsfiddle.net/fg7ke1mh/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe>
+<p><br></p>
+<h2 id="4-3-배열-랜더링"><a href="#4-3-배열-랜더링" class="headerlink" title="4.3 배열 랜더링"></a>4.3 배열 랜더링</h2><hr>
+<h3 id="4-3-1-배열-순회"><a href="#4-3-1-배열-순회" class="headerlink" title="4.3.1 배열 순회"></a>4.3.1 배열 순회</h3><iframe scrolling="no" width="100%" height="350px" src="//jsfiddle.net/wp3a39go/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe>
+<h3 id="4-3-2-객체-배열-순회"><a href="#4-3-2-객체-배열-순회" class="headerlink" title="4.3.2 객체 배열 순회"></a>4.3.2 객체 배열 순회</h3><iframe scrolling="no" width="100%" height="350px" src="//jsfiddle.net/amsbkw45/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe>
+<p><br></p>
+<p>현재 항목에 인덱스를 표기해야하는 경우 아래와 같이 index라는 특수한 변수를 사용할 수 있습니다.<br><iframe scrolling="no" width="100%" height="350px" src="//jsfiddle.net/tsgoum7y/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><br></p>
+<h2 id="4-4-v-for를-이용한-객체-프로퍼티-순회"><a href="#4-4-v-for를-이용한-객체-프로퍼티-순회" class="headerlink" title="4.4 v-for를 이용한 객체 프로퍼티 순회"></a>4.4 v-for를 이용한 객체 프로퍼티 순회</h2><hr>
+<p>객체의 프로퍼티를 순회하는 데 v-for를 사용할 수 있습니다. 또한 앞에서 배열의 index를 표기한 것처럼 객체 순회 시에도 똑같이 사용할 수 있으며 그 외 각 유효범위에서는 key라는 특별한 프로퍼티에 접근할 수 있습니다.</p>
+<iframe scrolling="no" width="100%" height="350px" src="//jsfiddle.net/o4vz95mp/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe>
+<p><br></p>
+<h1 id="요약"><a href="#요약" class="headerlink" title="요약"></a>요약</h1><hr>
+<h2 id="리스트-랜더링-v-for"><a href="#리스트-랜더링-v-for" class="headerlink" title="리스트 랜더링(v-for)"></a>리스트 랜더링(v-for)</h2><blockquote>
+<ul>
+<li>배열(객체)의 순회 시 v-for 디렉티브를 사용<br><br></li>
+<li>배열에서의 사용<br>v-for=”item in array”<br>v-for=”(item, index) in array”<br><br></li>
+<li>객체에서의 사용<br>v-for=”value in object”<br>v-for=”(value, key, index) in object” </li>
+</ul>
+</blockquote>
+</div><div class="article-meta" style="max-width:800px"><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/">study</a><span class="category-list-count">37</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/vue-js/">vue.js</a><span class="category-list-count">6</span></li></ul></li></ul></div></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjk924uhl0020awwca2d47sf5" data-title="(vue.js) - 04 리스트 랜더링" data-url="http://windfanta.github.io/blog/blog/2017/10/17/study-vue-4/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/blog/2017/10/17/study-vue-5/"><i class="icon icon-arror-left"></i></a></li><li><a href="/blog/2017/10/17/study-vue-3/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/BoizZ" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="https://weibo.com/heqibang" title="Weibo" target="_blank"><i class="icon icon-weibo"></i></a></li><li><a href="https://www.segmentfault.com/u/bon" title="SegmentFault" target="_blank"><i class="icon icon-segmentfault"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 windfanta.github.io/blog/<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>

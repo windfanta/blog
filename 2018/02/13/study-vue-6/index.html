@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>(vue.js) - 06 필터 - windfanta.github.io/blog/</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com"><span>Github</span></a></li><li><a href="https://www.v2ex.com/"><span>V2EX</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">(vue.js) - 06 필터</h1><ul class="meta"><li><i class="icon icon-author"></i>SUNGMIN SHIN</li><li><i class="icon icon-clock"></i>5 Minutes</li><li><i class="icon icon-calendar"></i>2018년 2월 13일</li></ul></div></div><div class="article-content" style="max-width:800px"><hr>
+<h1 id="Vue-js-2-프로그래밍"><a href="#Vue-js-2-프로그래밍" class="headerlink" title="[ Vue.js 2 프로그래밍  ]"></a>[ Vue.js 2 프로그래밍  ]</h1><p>(<a href="http://book.naver.com/bookdb/book_detail.nhn?bid=12320270" target="_blank" rel="noopener">http://book.naver.com/bookdb/book_detail.nhn?bid=12320270</a>)</p>
+<hr>
+<p><br></p>
+<h1 id="6-필터"><a href="#6-필터" class="headerlink" title="6. 필터"></a>6. 필터</h1><p><br></p>
+<h2 id="6-1-필터링된-결과"><a href="#6-1-필터링된-결과" class="headerlink" title="6.1 필터링된 결과"></a>6.1 필터링된 결과</h2><hr>
+<p>간혹 원본 데이터를 변경하거나 초기화하지 않으면서 필터링 된 배열을 표시해야할 때가 있습니다.</p>
+<p><strong>methods를 활용하여 이름으로 필터링 하기</strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/0pxgm1dt/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><br></p>
+<h2 id="6-1-1-계산된-프로퍼티-computed-properties-사용"><a href="#6-1-1-계산된-프로퍼티-computed-properties-사용" class="headerlink" title="6.1.1 계산된 프로퍼티(computed properties) 사용"></a>6.1.1 계산된 프로퍼티(computed properties) 사용</h2><p>계산된 프로퍼티로도 배열을 필터링 할 수 있습니다. 계산된 프로퍼티는 전부 자바스크립트로 구현하므로 섬세한 제어와 유연성을 확보할 수 있고 어디서든 필터링된 결과에 접근할 수 있습니다. 예를 들어 필터링된 배열의 길이를 코드 상의 어드 곳에서도 가져올 수 있습니다.</p>
+<p><strong>계산된 프로퍼티를 활용하여 득표수(upvotes)로 필터링 하기</strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/ubyut7xv/2/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><strong>v-model을 사용하여 동적으로 필터링하기</strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/3v3hdfg5/2/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><strong>셀렉트 박스에 v-model을 사용하여 동적으로 필터링하기</strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/q0xgsem5/1/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><br></p>
+<h2 id="6-2-결과-정렬"><a href="#6-2-결과-정렬" class="headerlink" title="6.2 결과 정렬"></a>6.2 결과 정렬</h2><p>이따금 어떤 기준에 따라 정렬된 배열을 표시해야 할 때가 있습니다. 계산된 프로퍼티를 이용해 각 이야기의 투표 수에 따라 정렬된 배열을 표시할 수 있습니다. 배열의 정렬하기 위해 자바스크립트 내장 함수인 sort를 사용하겠습니다</p>
+<blockquote>
+<p>Array.sort() - <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/sort</a></p>
+</blockquote>
+<p><strong>투표 수에 따른 정렬1</strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/jfas69gv/3/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p>배열을 upvotes에 값에 따라 정렬하긴 했지만 인기 있는 이야기가 먼저 나와야하는 데 기대했던 것과 다릅니다.<br>정렬된 배열의 순서를 변경하기 위해 사용한 sort 함수를 살펴 봅시다. 자바스크립트의 sort(compareFunction)에서 compareFunction이 전달되면 compareFunction의 반환 값에 따라 배열 요소가 정렬됩니다.<br>a와 b라는 두 요소를 비교 한다면</p>
+<blockquote>
+<ul>
+<li>compareFunction(a, b)가 0보다 작으면 a를 b보다 낮은 인덱스(앞으로)로 정렬</li>
+<li>compareFunction(a, b)가 0이면 a와 b의 위치를 변경하지 않음</li>
+<li>compareFunction(a, b)가 0보다 크면 b를 a보다 낮은 인덱스(앞으로)로 정렬</li>
+</ul>
+</blockquote>
+<p>결국 오름차순에서 내림차순으로 순서를 변경하려면 반환 값에 -1을 곱하면 됩니다.</p>
+<p><strong>투표 수에 따른 정렬2</strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/hja6rbas/1/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><br></p>
+<h2 id="6-3-사용자-정의-필터"><a href="#6-3-사용자-정의-필터" class="headerlink" title="6.3 사용자 정의 필터"></a>6.3 사용자 정의 필터</h2><hr>
+<p>사용자 정의 필터는 html코드를 더럽히는 일 없이 사용할 수 있으며 전역의 Vue.filter()를 이용해 처리된 값을 반환하는 fliterFunction을 전달하면 됩니다.</p>
+<blockquote>
+<p>공식 가이드의 filter 소개 - <a href="https://kr.vuejs.org/v2/guide/filters.html" target="_blank" rel="noopener">https://kr.vuejs.org/v2/guide/filters.html</a></p>
+</blockquote>
+<p><strong>사용자 정의 필터</strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/cnnkmccv/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><br></p>
+<h2 id="6-4-유틸리티-라이브러리"><a href="#6-4-유틸리티-라이브러리" class="headerlink" title="6.4 유틸리티 라이브러리"></a>6.4 유틸리티 라이브러리</h2><hr>
+<p>좀 더 개선된 방법으로 데이터를 정렬/필터/색인하기 위해서는 자바스크립트 유틸리티 라이브러리를 사용하는 것을 고려해볼 필요가 있습니다.<br>이미 LoDash, UnderScore, Sugar등 훌륭한 라이브러리가 준비돼 있습니다.</p>
+<blockquote>
+<ul>
+<li>LoDash(<a href="https://lodash.com/" target="_blank" rel="noopener">https://lodash.com/</a>)</li>
+<li>underScore.js(<a href="http://underscorejs.org/" target="_blank" rel="noopener">http://underscorejs.org/</a>)</li>
+<li>sugar.js(<a href="https://sugarjs.com/" target="_blank" rel="noopener">https://sugarjs.com/</a>)</li>
+</ul>
+</blockquote>
+<p><strong>lodash를 사용하여 정렬1</strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/9jh877c9/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><strong>lodash를 사용하여 정렬2(버튼추가)</strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/zvLhfo3r/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><strong>lodash를 사용하여 정렬2(셀렉트박스, 버튼추가)</strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/pvmx6bp4/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+</div><div class="article-meta" style="max-width:800px"><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/">study</a><span class="category-list-count">37</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/vue-js/">vue.js</a><span class="category-list-count">6</span></li></ul></li></ul></div></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjk924uhp0025awwccfm3ab7n" data-title="(vue.js) - 06 필터" data-url="http://windfanta.github.io/blog/blog/2018/02/13/study-vue-6/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/blog/2018/02/14/study-vue-7/"><i class="icon icon-arror-left"></i></a></li><li><a href="/blog/2018/02/12/study-jquery-8/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/BoizZ" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="https://weibo.com/heqibang" title="Weibo" target="_blank"><i class="icon icon-weibo"></i></a></li><li><a href="https://www.segmentfault.com/u/bon" title="SegmentFault" target="_blank"><i class="icon icon-segmentfault"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 windfanta.github.io/blog/<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>(ES5) - 11. 이벤트 핸들링 - windfanta.github.io/blog/</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com"><span>Github</span></a></li><li><a href="https://www.v2ex.com/"><span>V2EX</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">(ES5) - 11. 이벤트 핸들링</h1><ul class="meta"><li><i class="icon icon-author"></i>SUNGMIN SHIN</li><li><i class="icon icon-clock"></i>20 Minutes</li><li><i class="icon icon-calendar"></i>2017년 9월 14일</li></ul></div></div><div class="article-content" style="max-width:800px"><p><br></p>
+<h1 id="열혈강의-No-More-Copy-amp-Paste-자바스크립트"><a href="#열혈강의-No-More-Copy-amp-Paste-자바스크립트" class="headerlink" title="[ 열혈강의 No More Copy &amp; Paste 자바스크립트 ]"></a>[ 열혈강의 No More Copy &amp; Paste 자바스크립트 ]</h1><p>(<a href="http://book.naver.com/bookdb/book_detail.nhn?bid=6983102" target="_blank" rel="noopener">http://book.naver.com/bookdb/book_detail.nhn?bid=6983102</a>)</p>
+<p><br></p>
+<h1 id="11-이벤트-핸들링"><a href="#11-이벤트-핸들링" class="headerlink" title="11. 이벤트 핸들링"></a>11. 이벤트 핸들링</h1><p><br></p>
+<h2 id="서론"><a href="#서론" class="headerlink" title="서론"></a>서론</h2><hr>
+<p>이벤트(EVENT)라는 객체는 웹 어플리케이션에 변화가 생길 때 생성됩니다.<br>어플리케이션이 처음 열리는 순간이나 마우스로 클릭하거나 키보드로 입력하는 등 특정 엘리먼트의 변화와 문서를 떠나는 순간까지의 모든 활동에 대해서 이벤트가 발생 합니다.</p>
+<p>이러한 활동이 감지되면 자바스크립트는 스스로 이벤트 객체를 생성하고 이 객체는 해당 활동에 대한 여러가지 정보를 함께 갖고 있습니다.</p>
+<p><u>특정한 이벤트에 대한 응답을 설정하거나 해제하는 행위를 이벤트 핸들링(event handling)</u>이라고 말하고 <u>이에 대한 응답으로 반응하는 함수를 리스너(listener)</u>라고 합니다.</p>
+<blockquote>
+<p>이벤트 핸들러들(Event handlers)은 DOM에 존재하는 다양한 엘리먼트들과 관련되어 있습니다. 이벤트가 발생하게 되면, 이벤트 객체는 동적으로 생성되며, 이벤트를 처리할 수 있는 이벤트 리스너(event listener)들로 전달됩니다. DOM의 Event 인터페이스는 핸들러 함수로 접근할 수 있으며, 이벤트 객체는 첫 번째 인자로만 전달됩니다.</p>
+<ul>
+<li>출처(<a href="https://developer.mozilla.org/ko/docs/Web/API/Event" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/API/Event</a>)</li>
+</ul>
+</blockquote>
+<p><br></p>
+<h2 id="11-1-기본-이벤트"><a href="#11-1-기본-이벤트" class="headerlink" title="11.1 기본 이벤트"></a>11.1 기본 이벤트</h2><hr>
+<p>이벤트 객체의 속성 </p>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bubbles</td>
+<td>이벤트 작동 방식이 버블링인지 여부를 반환한다. </td>
+</tr>
+<tr>
+<td>cancelable</td>
+<td>이벤트가 취소되었는지를 반환한다.</td>
+</tr>
+<tr>
+<td>currentTarget</td>
+<td>이벤트 응답자가 수행되고 있는 대상 객체를 반환한다.</td>
+</tr>
+<tr>
+<td>defaultPrevent</td>
+<td>event.preventDefault() 메서드를 사용하여 이벤트의 기본 행동을 취소할 수 있는 지 여부를 나타내는 boolean 값</td>
+</tr>
+<tr>
+<td>eventPhase</td>
+<td>이벤트 흐름에서 현재 단계를 알려주는 속성<br> eventPhase=1 일때 capture(EventPhase.CAPTURING_PHASE)<br>eventPhase=2 일때 target(EventPhase.AT_TARGET)<br> eventPhase=3일 때 bubbling(EventPhase.BUBBLING_PHASE)</td>
+</tr>
+<tr>
+<td>explicitOriginalTarget</td>
+<td>마지막으로 이벤트가 발생한 객체를 반환</td>
+</tr>
+<tr>
+<td>originalTarget</td>
+<td>이벤트가 최초로 발생한 객체를 반환한다.</td>
+</tr>
+<tr>
+<td>target</td>
+<td>이벤트가 실제로 발생한 객체(이벤트 응답자가 등록되지 않았더라도)를 반환한다.</td>
+</tr>
+<tr>
+<td>timeStamp</td>
+<td>이벤트가 발생한 시간을 반환.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>발생한 이벤트의 형식을 반환한다.</td>
+</tr>
+<tr>
+<td>isTrusted</td>
+<td>이벤트 브라우저(EX&gt; 사용자 클릭 이후) 또는 스크립트(event.initEvent 같은 생성 방법을 사용한 스크립트)에 의해 시작되었는지를 반환</td>
+</tr>
+</tbody>
+</table>
+<iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/kyaub3Ld/embedded/result,html,js/dark" frameborder="0" allowfullscreen></iframe>
+<p>이벤트 객체의 메서드</p>
+<table>
+<thead>
+<tr>
+<th>메서드</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>initEvent()</td>
+<td>새 이벤트 속성을 초기화한다.</td>
+</tr>
+<tr>
+<td>preventDefault()</td>
+<td>이벤트를 취소할 수 있다면 이벤트의 전파를 막지 않고 그 이벤트를 취소한다.</td>
+</tr>
+<tr>
+<td>stopImmediatePropagation()</td>
+<td>이벤트의 전파를 막고 현재 실행 중인 리스너 함수까지 실행한다.</td>
+</tr>
+<tr>
+<td>stopPropagation()</td>
+<td>이벤트의 전파를 막고 현재 엘리먼트에 등록된 응답자 함수까지 실행한다.</td>
+</tr>
+</tbody>
+</table>
+<iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/vrvbwnnr/embedded/result,html,js/dark" frameborder="0" allowfullscreen></iframe>
+<p><br></p>
+<h3 id="이벤트-전파"><a href="#이벤트-전파" class="headerlink" title="이벤트 전파"></a>이벤트 전파</h3><p>이벤트 전파란 특정 위치에 엘리먼트가 여러개 겹쳐 있는 지점에 click과 같은 이벤트가 발생 되었을 때 가장 위에 있는 엘리먼트에서만 click이벤트가 발생하는 것이 아닌 겹쳐져있는 아래 쪽 엘리먼트들에도 이벤트가 전달되는 것을 말 합니다.</p>
+<p>예제 11-1(html)<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">div&#123;margin:5px;padding:5px;border:1px solid black&#125;</span></span><br><span class="line"><span class="undefined">#depth1&#123;background:darkgreen&#125;</span></span><br><span class="line"><span class="undefined">#depth2&#123;background:yellowgreen&#125;</span></span><br><span class="line"><span class="undefined">#depth3&#123;background:lightgreen&#125;</span></span><br><span class="line"><span class="undefined">textarea&#123;width:90%;height:200px&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"depth1"</span>&gt;</span></span><br><span class="line">  depth1</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"depth2"</span>&gt;</span></span><br><span class="line">    depth2</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"depth3"</span>&gt;</span></span><br><span class="line">      depth3</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">cols</span>=<span class="string">"30"</span> <span class="attr">rows</span>=<span class="string">"10"</span> <span class="attr">style</span>=<span class="string">"width:100%;height:100px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>예제 11-1(javascript)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> logger = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'textarea'</span>)[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">newtext</span>) </span>&#123;</span><br><span class="line">    logger.value+= newtext + <span class="string">'\n'</span>;</span><br><span class="line">    logger.scrollTop = logger.scrollHeight;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> divs = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'div'</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; divs.length; i++) &#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">var</span> div = divs[i];</span><br><span class="line">      div.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (div.id === <span class="string">'depth1'</span>) &#123;</span><br><span class="line">          log(div.id);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (div.id === <span class="string">'depth2'</span>) &#123;</span><br><span class="line">          log(div.id);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (div.id === <span class="string">'depth3'</span>) &#123;</span><br><span class="line">          log(div.id);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<iframe scrolling="no" width="100%" height="350px" src="//jsfiddle.net/s1214Lgu/embedded/result,html,js/dark" frameborder="0" allowfullscreen></iframe>
+<p>위 예제는 div 엘리먼트 3개를 겹치게 하여 놓고 div 엘리먼트들에 클릭 이벤트가 발생하면 어떤 엘리먼트에서 이벤트가 발생했는지에 대한 로그를 textarea 엘리먼트에 보여주도록 되어 있습니다.<br>depth3을 클릭하면 depth3에서 이벤트가 전파되어 depth1까지 클릭 이벤트가 발생한 것을 확인할 수 있습니다.</p>
+<blockquote>
+<p>참고&gt; <a href="http://programmingsummaries.tistory.com/313]" target="_blank" rel="noopener">이벤트 전파를 중단하는 네가지 방법</a></p>
+</blockquote>
+<pre>(http://programmingsummaries.tistory.com/313)</pre>
+
+<p><br><br>이벤트 속성에 대한 예제로 클릭과 클릭 사이의 시간 간격을 계산하는 어플리케이션 입니다.</p>
+<p>예제 11-2 (html)<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>이벤트 핸들링<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  클릭한 간격:</span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"msContent"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>클릭<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>예제 11-2 (javascript)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> eventCtrl = &#123;</span><br><span class="line">  add: <span class="function"><span class="keyword">function</span>(<span class="params">elem, eventType, handler</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 이벤트 타입에서 'on' 문자열 제거</span></span><br><span class="line">    eventType = eventType.replace(<span class="string">'on'</span>, <span class="string">''</span>);</span><br><span class="line">    <span class="comment">// addEventListener 메서드가 존재한다면 실행</span></span><br><span class="line">    <span class="keyword">if</span> (elem.addEventListener) &#123;</span><br><span class="line">      elem.addEventListener(eventType, handler, <span class="literal">false</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(elem.attachEvent) &#123;</span><br><span class="line">      eventType = <span class="string">'on'</span> + eventType;</span><br><span class="line">      elem.attachEvent(eventType, handler);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  remove: <span class="function"><span class="keyword">function</span>(<span class="params">elem, eventType, handler</span>) </span>&#123;</span><br><span class="line">    eventType = eventType.replace(<span class="string">'on'</span>, <span class="string">''</span>);</span><br><span class="line">    <span class="keyword">if</span> (elem.removeEventListener) &#123;</span><br><span class="line">      elem.removeEventListener(eventType,  handler, <span class="literal">false</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(elem.detachEvent) &#123;</span><br><span class="line">      eventType = <span class="string">'on'</span> + eventType;</span><br><span class="line">      elem.detachEvent(eventType, handler);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">eventCtrl.add(<span class="built_in">window</span>, <span class="string">'load'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> time = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">var</span> button = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'button'</span>)[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">  eventCtrl.add(button, <span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> stamp = <span class="built_in">parseInt</span>(event.timeStamp);</span><br><span class="line">    <span class="keyword">if</span> (time &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="built_in">document</span>.getElementById(<span class="string">'msContent'</span>).innerHTML = stamp - time;</span><br><span class="line">    &#125;</span><br><span class="line">    time = stamp;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>특정 엘리먼트에 이벤트를 등록하는 등의 어떠한 조작을 하려면 본문의 HTML 태그들이 완성된 후여야 합니다. 그러므로 페이지를 모두 읽은 다음에 버튼 엘리먼트에 이벤트를 등록하게 한 예제 입니다.</p>
+<p><br></p>
+<h2 id="11-2-마우스-이벤트"><a href="#11-2-마우스-이벤트" class="headerlink" title="11.2 마우스 이벤트"></a>11.2 마우스 이벤트</h2><hr>
+<p>마우스를 통해 발생된 이벤트를 일걷는 것으로 클릭하거나 대상 위로 마우스를 올리거나 혹은 드래그 앤 드롭과 같은 이벤트들이 여기에 속하게 됩니다 마우스를 통해 발생한 이벤트에는 마우스 위치, 버튼 정보들과 같은 다양한 정보를 포함하고 있습니다.<br>마우스 위치와 관련된 속성들은 아래와 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clientX, clientY</td>
+<td>브라우저 창을 기준으로 한 X, Y의 좌표 값(스크롤은 무시)</td>
+</tr>
+<tr>
+<td>pageX, pageY</td>
+<td>랜더링된 문서를 기준으로 한 X, Y 좌표, IE에서는 지원하지 않음</td>
+</tr>
+<tr>
+<td>layerX, layerY,<br>offsetX, offsetY</td>
+<td>타겟 엘리먼트를 기준으로 한 X, Y 좌표</td>
+</tr>
+</tbody>
+</table>
+<p>이 정보들을 활용해 고전적인 방법의 그림을 그리는 웹 어플리케이션의 예제<br><iframe scrolling="no" width="100%" height="455px" src="//jsfiddle.net/oa1yyjrd/embedded/result,html,js/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><br></p>
+<h2 id="11-3-키보드-이벤트"><a href="#11-3-키보드-이벤트" class="headerlink" title="11.3 키보드 이벤트"></a>11.3 키보드 이벤트</h2><hr>
+<p>키보드 이벤트는 키보드를 통해 생성된 이벤트로 눌려진 버튼의 정보를 갖고 있습니다. 이때 이벤트가 발생하 키보드의 값은 event.keyCode 또는 event.which 속성으로 확인할 수 있고 이 값은 숫자로 나타나게 됩니다.<br><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/wrf8tmxq/embedded/result,html,js/dark" frameborder="0" allowfullscreen></iframe></p>
+<ul>
+<li>브라우저 별 키 코드(P339 표 11-4)</li>
+<li>특수 키(P339 ~ 340 표 11-5)</li>
+<li>숫자 키(P340 표 11-6)</li>
+<li>기호 키(P340 ~ 341 표 11-7)</li>
+<li>화살표 키(P341 표 11-8)</li>
+<li>기능 키(P341 표 11-9)</li>
+<li>키 패드(P342 표 11-10)</li>
+<li>키타 키(P342 표 11-11)</li>
+</ul>
+<p><br></p>
+<h2 id="11-4-이벤트-목록"><a href="#11-4-이벤트-목록" class="headerlink" title="11.4 이벤트 목록"></a>11.4 이벤트 목록</h2><hr>
+<p>앞 서 다룬 것 외에도 이벤트 종류는 아주 많습니다. 모두 외울 필요는 없지만 어떤 종류의 이벤트가 있는지 한 번이라도 확인하고 지나가길 바랍니다.</p>
+<ul>
+<li>이벤트(P343 ~ 347 표11-12)</li>
+</ul>
+</div><div class="article-meta" style="max-width:800px"><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/">study</a><span class="category-list-count">37</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/es5/">es5</a><span class="category-list-count">3</span></li></ul></li></ul></div></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjk924ug80004awwc8ce9roc3" data-title="(ES5) - 11. 이벤트 핸들링" data-url="http://windfanta.github.io/blog/blog/2017/09/14/study-es5-11/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/blog/2017/09/15/study-es6-16/"><i class="icon icon-arror-left"></i></a></li><li><a href="/blog/2017/09/13/study-es6-3/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/BoizZ" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="https://weibo.com/heqibang" title="Weibo" target="_blank"><i class="icon icon-weibo"></i></a></li><li><a href="https://www.segmentfault.com/u/bon" title="SegmentFault" target="_blank"><i class="icon icon-segmentfault"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 windfanta.github.io/blog/<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>

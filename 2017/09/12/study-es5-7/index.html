@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>(ES5) - DOM Script - windfanta.github.io/blog/</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com"><span>Github</span></a></li><li><a href="https://www.v2ex.com/"><span>V2EX</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">(ES5) - DOM Script</h1><ul class="meta"><li><i class="icon icon-author"></i>SUNGMIN SHIN</li><li><i class="icon icon-clock"></i>58 Minutes</li><li><i class="icon icon-calendar"></i>2017년 9월 12일</li></ul></div></div><div class="article-content" style="max-width:800px"><p><br></p>
+<h1 id="열혈강의-No-More-Copy-amp-Paste-자바스크립트"><a href="#열혈강의-No-More-Copy-amp-Paste-자바스크립트" class="headerlink" title="[ 열혈강의 No More Copy &amp; Paste 자바스크립트 ]"></a>[ 열혈강의 No More Copy &amp; Paste 자바스크립트 ]</h1><p>(<a href="http://book.naver.com/bookdb/book_detail.nhn?bid=6983102" target="_blank" rel="noopener">http://book.naver.com/bookdb/book_detail.nhn?bid=6983102</a>)</p>
+<p><br></p>
+<h1 id="7-DOM-Script"><a href="#7-DOM-Script" class="headerlink" title="7. DOM Script"></a>7. DOM Script</h1><p><br></p>
+<h2 id="서론"><a href="#서론" class="headerlink" title="서론"></a>서론</h2><hr>
+<ul>
+<li><p><strong>DOM</strong><br>문서 객체 모델, document object model</p>
+</li>
+<li><p><strong>DOM Script</strong><br>html문서에 접근하고 그 안의 내용물을 마음대로 바꾸거나 새로운 객체를 직접 만들어 문서의 원하는 부위에 삽입할 수 있고 삭제도 할 수 있는 것</p>
+</li>
+<li><p><strong>도큐먼트(document) 객체</strong><br>DOM 최 상위 객체로 window 객체 안에 가장 커다란 단위의 객체 중 하나<br>HTML문서 자체를 document라고 칭한다고 보면 됨</p>
+</li>
+<li><p><strong>엘리먼트(element) 객체</strong><br>태그로 만들어진 모든 요소를 엘리먼트라고 부름(div, span, table 등등)</p>
+</li>
+<li><p><strong>애트리뷰트(attribute)</strong><br>엘리먼트가 가진 속성 (id, name, class 등등)</p>
+</li>
+<li><p><strong>노드(node)</strong><br>객체를 상징하는 표현<br>엘리먼트, 애트리뷰트, 엘리먼트 내부의 글 내용도 모두 노드</p>
+</li>
+<li><p><strong>API</strong><br>API는 자신이 가진 명령이나 정보와 같은 리소스를 외부에서 접근할 수 있도록 해주는 일종의 통로(P193)<br><br></p>
+</li>
+</ul>
+<h2 id="문서-document-객체"><a href="#문서-document-객체" class="headerlink" title="문서(document) 객체"></a>문서(document) 객체</h2><hr>
+<h3 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h3><ul>
+<li>문서에 엘리먼트를 만들거나 찾을 수 있도록 도와주기도 하고 location이나 history 객체도 함께 가지고 있음</li>
+<li>document 객체는 window 객체에 포함되며 특정한 엘리먼트들을 포함하고 있음</li>
+<li>주로 문서 유형(document type)이나 색상, 포맷과 같은 문서 정보 접근하는 방법을 제공</li>
+</ul>
+<h3 id="document-객체의-속성"><a href="#document-객체의-속성" class="headerlink" title="document 객체의 속성"></a>document 객체의 속성</h3><ul>
+<li>P194 표 7-1 참고</li>
+</ul>
+<h3 id="document-객체의-메서드-P196-표-7-2"><a href="#document-객체의-메서드-P196-표-7-2" class="headerlink" title="document 객체의 메서드 (P196 표 7-2)"></a>document 객체의 메서드 (P196 표 7-2)</h3><ul>
+<li><strong>open()</strong>: 새로운 문서 작성을 시작(새로운 document가 생성됨)</li>
+<li><p><strong>createAttribute()</strong>: 속성 노드를 생성</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span> hi=<span class="string">"안녕"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">document</span>.createAttribute(<span class="string">'hi'</span>);</span><br><span class="line"><span class="keyword">var</span> app = <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>);</span><br><span class="line">app.getAttribute(<span class="string">'hi'</span>) <span class="comment">// -&gt; '안녕'</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>close()</strong>: 새로운 문서 작성을 종료</p>
+</li>
+<li><strong>createDocumentFragment()</strong>: document 객체 참조를 위한 조각을 생성한다</li>
+<li><p><strong>createElement()</strong>: 엘리먼트 생성</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> jbBtn = <span class="built_in">document</span>.createElement( <span class="string">'button'</span> );</span><br><span class="line"><span class="keyword">var</span> jbBtnText = <span class="built_in">document</span>.createTextNode( <span class="string">'Click'</span> );</span><br><span class="line">jbBtn.appendChild( jbBtnText );</span><br><span class="line"><span class="built_in">document</span>.body.appendChild( jbBtn );</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>createElementNS()</strong>: 네임 스페이스를 참조하는 새로운 엘리먼트를 생성<br>(참고 - <a href="https://developer.mozilla.org/ko/docs/Web/API/Document/createElementNS" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/API/Document/createElementNS</a>)</p>
+</li>
+<li><p><strong>createEvent()</strong>: 새로운 이벤트를 생성, 이벤트를 정의하는 오래된 기법으로 잘 사용되지 않는 것으로 보임, IE에선 사용 불가</p>
+</li>
+<li><p><strong>createRange()</strong>: 편집할 수 있는 범위를 지정하는 새로운 range(위치/범위) 객체를 생성<br>( <a href="https://developer.mozilla.org/ko/docs/Web/API/Document/createRange" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/API/Document/createRange</a> )</p>
+</li>
+<li><p><strong>createTextNode()</strong>: 새로운 텍스트 노드를 생성한다</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">EX&gt; <span class="keyword">var</span> apps = <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>);</span><br><span class="line"><span class="keyword">var</span> textNode = <span class="built_in">document</span>.createTextNode(<span class="string">'text node'</span>); <span class="comment">// #app에 문자 text node가 추가 됨</span></span><br><span class="line">apps.appendChild(txtNode);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>execCommand()</strong>: 문서에서 사용 가능한 명령을 실행시킨다.</p>
+</li>
+<li><p><strong>getElementById()</strong>: id속성이 일치하는 하나의 엘리먼트를 반환</p>
+</li>
+<li><p><strong>getElementByName()</strong>: name속성이 일치하는 엘리먼트들을 반환</p>
+</li>
+<li><p><strong>getElementByTagName()</strong>: 태그 이름이 일치하는 엘리먼트들을 반환</p>
+</li>
+<li><p><strong>getElementByTagNameNS()</strong>: 태그 이름과 네임스페이스가 일치하는 엘리먼트들을 반환</p>
+</li>
+<li><p><strong>write()</strong>: 문서에 내용을 추가</p>
+</li>
+<li><p><strong>whiteln()</strong>: 문서에 내용을 추가하고 줄 바꿈을 한다</p>
+</li>
+<li><p>P197 window.open을 이용한 새창 예제 (HTML)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnFunc1"</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>func1(팝업창 출력)<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>P197 window.open을 이용한 새창 예제 (JS)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// func1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 팝업 윈도우 설정 window.open(url, name, properties);</span></span><br><span class="line">  <span class="keyword">var</span> popWin = <span class="built_in">window</span>.open(<span class="string">''</span>, <span class="string">'popwin'</span>, <span class="string">'width=400, height=300'</span>);</span><br><span class="line">  <span class="comment">// 팝업 윈도우의 document를 변수에 할당</span></span><br><span class="line">  <span class="keyword">var</span> popDoc = popWin.document;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 팝업 윈도우의 document를 open</span></span><br><span class="line">  popDoc.open();</span><br><span class="line">  <span class="comment">// 팝업 윈도우의 document내에 내용 추가</span></span><br><span class="line">  popDoc.write(<span class="string">'&lt;html&gt;&lt;head&gt;&lt;title&gt;popup&lt;/title&gt;&lt;/head&gt;'</span>);</span><br><span class="line">  popDoc.write(<span class="string">'&lt;body bgcolor="gold"&gt;'</span>);</span><br><span class="line">  popDoc.write(<span class="string">'&lt;p align="center"&gt;&lt;b&gt;팝업 창 입니다.&lt;/b&gt;&lt;/p&gt;'</span>);</span><br><span class="line">  popDoc.write(<span class="string">'&lt;/body&gt;&lt;/html&gt;'</span>);</span><br><span class="line">  <span class="comment">// 팝업 윈도우의 document를 close</span></span><br><span class="line">  popDoc.close();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// event bind</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc1'</span>).addEventListener(<span class="string">'click'</span>, func1);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h2 id="HTML-객체-만들기"><a href="#HTML-객체-만들기" class="headerlink" title="HTML 객체 만들기"></a>HTML 객체 만들기</h2><hr>
+<h3 id="태그-직접-써넣기"><a href="#태그-직접-써넣기" class="headerlink" title="태그 직접 써넣기"></a>태그 직접 써넣기</h3><ul>
+<li>앞서 해본 방식(document.write)으로 엘리먼트를 넣으면 브라우저가 해석하여 추가하는 것으로 엘리먼트를 만드는 것이 아님<br><br></li>
+</ul>
+<h3 id="DOM-API-이용하기"><a href="#DOM-API-이용하기" class="headerlink" title="DOM API 이용하기"></a>DOM API 이용하기</h3><ul>
+<li><p>document객체가 제공하는 속성과 메서드를 이용하여 엘리먼트 만들기</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">EX&gt; <span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">'태그 명'</span>);</span><br><span class="line"><span class="keyword">var</span> attr = <span class="built_in">document</span>.createAttribute(<span class="string">'속성 명'</span>);</span><br><span class="line"><span class="keyword">var</span> textNode = <span class="built_in">document</span>.createTextNode(<span class="string">'내용'</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>엘리먼트 만들기 예(html)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"func2"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnFunc2-1"</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>func2-1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnFunc2-2"</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>func2-3<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"textFunc2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>엘리먼트 만들기 예(js)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func2 = &#123;</span><br><span class="line">  createTag1: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 엘리먼트 생성</span></span><br><span class="line">    <span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line">    <span class="comment">// 속성(어트리뷰트) style 생성</span></span><br><span class="line">    <span class="keyword">var</span> attribute = <span class="built_in">document</span>.createAttribute(<span class="string">'style'</span>);</span><br><span class="line">    <span class="comment">// 속성 값 선언</span></span><br><span class="line">    attribute.nodeValue = <span class="string">'background:#eee;width:100px;height:100px;'</span>;</span><br><span class="line">    <span class="comment">// 엘리먼트에 속성 적용</span></span><br><span class="line">    element.setAttributeNode(attribute);</span><br><span class="line">    <span class="comment">// 엘리먼트를 body 하위에 추가</span></span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'textFunc2'</span>).appendChild(element);</span><br><span class="line">  &#125;,</span><br><span class="line">  createTag2: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 엘리먼트 생성</span></span><br><span class="line">    <span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line">    <span class="comment">// 속성 선언 및 적용(createTag1와 사용 방법 비교)</span></span><br><span class="line">    element.setAttribute(<span class="string">'style'</span>, <span class="string">'background:#aaa;width:100px;height:100px;'</span>);</span><br><span class="line">    <span class="comment">// 엘리먼트를 body하위에 추가</span></span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'textFunc2'</span>).appendChild(element);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc2-1'</span>).addEventListener(<span class="string">'click'</span>, func2.createTag1);</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc2-2'</span>).addEventListener(<span class="string">'click'</span>, func2.createTag2);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h2 id="객체-가져오기"><a href="#객체-가져오기" class="headerlink" title="객체 가져오기"></a>객체 가져오기</h2><hr>
+<h3 id="특정-대상-가져오기"><a href="#특정-대상-가져오기" class="headerlink" title="특정 대상 가져오기"></a>특정 대상 가져오기</h3><ul>
+<li><p><strong>getElementsByTagName</strong><br>태그 이름으로 엘리먼트를 가져 옴 (여러개의 엘리먼트 동시 선택 가능)</p>
+</li>
+<li><p><strong>getElementById == $(‘#element’)</strong><br>아이디를 통해서 엘리먼트를 가져오라는 의미<br>id를 통해 가져오기 때문에 1개의 엘리먼트 만을 반환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>);</span><br><span class="line">element.style.backgroundColor = <span class="string">'red'</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>getElementsByName() == $(‘:[name=name]’)</strong><br>name 속성을 통해 엘리먼트를 가져오라는 의미<br>선택된 대상을 배열의 형태로 반환(즉 여러개의 엘리먼트가 동시에 선택될 수 있음)</p>
+</li>
+<li><strong>getElementsByClassName() == $(‘.class’)</strong><br>class 속성을 통해 엘리먼트를 가져오라는 의미<br>선택된 대상을 배열의 형태로 반환(즉 여러개의 엘리먼트가 동시에 선택될 수 있음)</li>
+<li><p><strong>document.querySelector()</strong><br>CSS선택자로 엘리먼트를 가져오라는 의미<br>선택된 엘리먼트 1개만을 반환하며 다수 인경우 첫번째 대상만 가져옴<br>일치하는 엘리먼트를 찾지 못한 경우 null을 반환<br>ie8 미만에서 지원되지 않음</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'body #fWrap'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>document.querySelectorAll()</strong><br>기본 적으로는 querySelector와 동일<br>차이점 모든 엘리먼트를 가져 온다는 점<br>다수의 선택자를 입력해야하는 경우 컴마로 구분하여 사용</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">'body, html, #fWrap'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h3 id="자식-노드-찾기"><a href="#자식-노드-찾기" class="headerlink" title="자식 노드 찾기"></a>자식 노드 찾기</h3><ul>
+<li><p><strong>childNodes</strong><br>메서드가 아닌 프로퍼티<br>선택된 대상의 하위 노드를 배열로 반환<br>상위 대상이 배열의 형태인 경우 아래와 같이 사용해야하는 점을 주의</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ele = <span class="built_in">document</span>.querySelectorAll(<span class="string">'li'</span>);</span><br><span class="line">ele[<span class="number">0</span>].childNodes</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>firstChild, lastChild</strong><br>첫 번째 자식와 마지막 자식 노드는 쉽게 선택할 수 있도록 프로퍼티가 존재</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ele = <span class="built_in">document</span>.querySelectorAll(<span class="string">'li'</span>);</span><br><span class="line">ele.firstChild</span><br><span class="line">ele.lastChild</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h3 id="부모-노드-찾기"><a href="#부모-노드-찾기" class="headerlink" title="부모 노드 찾기"></a>부모 노드 찾기</h3><ul>
+<li><strong>parentElement, parentNode</strong><br>바로 윗 부모 1개를 반환하는 프로퍼티<br>이름은 다르나 용도는 같은 것으로 보임<br><br></li>
+</ul>
+<h3 id="형제-노드-찾기"><a href="#형제-노드-찾기" class="headerlink" title="형제 노드 찾기"></a>형제 노드 찾기</h3><ul>
+<li><strong>previousSibling, nextSibling</strong><br>각각 이전, 다음 형재를 선택하는 프로퍼티<br><br></li>
+</ul>
+<h3 id="기타"><a href="#기타" class="headerlink" title="기타"></a>기타</h3><ul>
+<li><p><strong>document.all</strong><br>document 내 모든 엘리먼트</p>
+</li>
+<li><p><strong>document.forms</strong><br>document 내 모든 form 엘리먼트</p>
+</li>
+<li><p><strong>document.images</strong><br>document 내 모든 img 엘리먼트</p>
+</li>
+<li><p><strong>document.links</strong><br>document 내 모든 a 엘리먼트</p>
+</li>
+<li><p><strong>document.scripts</strong><br>document 내 모든 script 엘리먼트</p>
+</li>
+<li><p><strong>document.styleSheets</strong><br>document 내 모든 link 또는 style 엘리먼트</p>
+</li>
+</ul>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><ul>
+<li><p>복수의 대상을 반환하는 항목은 뒤에 s가 추가 됨</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getElementsByClassName(<span class="string">'class'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>복수의 대상을 반환하는 메서드, 속성은 배열의 형태로 전달</p>
+</li>
+<li><p>선택된 엘리먼트의 자식 엘리먼트를 가져 오기의 다른 예</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> parent = <span class="built_in">document</span>.getElementById(<span class="string">'parent'</span>);</span><br><span class="line"><span class="keyword">var</span> child = parent.getElementsByClassName(<span class="string">'child'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h2 id="엘리먼트-element-객체"><a href="#엘리먼트-element-객체" class="headerlink" title="엘리먼트(element) 객체"></a>엘리먼트(element) 객체</h2><hr>
+<h3 id="엘리먼트-객체의-속성"><a href="#엘리먼트-객체의-속성" class="headerlink" title="엘리먼트 객체의 속성"></a>엘리먼트 객체의 속성</h3><ul>
+<li>P221 표7-4 참고<br><br></li>
+</ul>
+<h3 id="엘리먼트-객체의-메서드-P222-표7-5"><a href="#엘리먼트-객체의-메서드-P222-표7-5" class="headerlink" title="엘리먼트 객체의 메서드(P222 표7-5)"></a>엘리먼트 객체의 메서드(P222 표7-5)</h3><ul>
+<li><p><strong>addEventListener(‘이벤트 명’, ‘함수’, ‘캡쳐 사용 여부’)</strong><br>이벤트 발생 시 실행할 함수를 등록</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc1'</span>).addEventListener(<span class="string">'click'</span>, func1);</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc1'</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  alert(<span class="string">'click'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>appendChild()</strong><br>node의 하위 객체의 가장 마지막에 추가</p>
+</li>
+<li><p><strong>blur()</strong><br>주시 대상 설정(focus)을 해제(즉 focus 해제)</p>
+</li>
+<li><p><strong>click()</strong><br>대상에 클릭 이벤트를 발생 (onClick과 다른 점 주의)</p>
+</li>
+<li><p><strong>cloneNode()</strong><br>노드의 복사본을 만들어서 반환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ele = <span class="built_in">document</span>.getElementById(<span class="string">'fWrap'</span>);</span><br><span class="line"><span class="keyword">var</span> copy = ele.cloneNode(<span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>dispatchEvent(이벤트)</strong><br>이벤트가 발생했다는 것을 알림</p>
+</li>
+<li><strong>focus()</strong><br>주시 대상으로 설정(focus 설정)</li>
+<li><p><strong>getAttribute(‘속성명’)</strong><br>속성 값을 반환</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;button id=<span class="string">"navInvite"</span> type=<span class="string">"button"</span> data-name=<span class="string">"type_invite"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"active"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="keyword">var</span> nav = <span class="built_in">document</span>.getElementById(<span class="string">'navInvite'</span>);</span><br><span class="line">nav.getAttribute(<span class="string">'data-name'</span>); -&gt; <span class="string">'type_invite'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>getAttributeNS(‘속성이름’, ‘NS’)</strong><br>속성 이름과 네임스페이스를 가진 속성 값을 받아 옴</p>
+</li>
+<li><p><strong>getAttributeNode(‘속성이름’)</strong><br>속성 이름에 해당하는 속성 객체를 받아 온다<br>( 받아 온 값은 각각 .name, .value로 확인 가능 )</p>
+</li>
+<li><p><strong>getAttributeNodeNS()</strong><br>속성 이름과 네임 스페이스를 가진 속성 객체를 받아 옴</p>
+</li>
+<li><p><strong>hasAttribute()</strong><br>속성을 가졌는지 boolean 값으로 반환</p>
+</li>
+<li><p><strong>hasAttributeNS()</strong><br>속성과 네임스페이스를 가졌는지 boolean 값으로 반환</p>
+</li>
+<li><p><strong>hasAttributes()</strong><br>속성을 하나라도 가졌는지 boolean 값으로 반환</p>
+</li>
+<li><p><strong>hasChildNodes()</strong><br>하위 객체를 하나라도 가졌는지 boolean 값으로 반환</p>
+</li>
+<li><p><strong>insertBefore(삽입할 객체, 하위 기준 객체)</strong><br>하위 기준 객체 바로 앞에 객체를 삽입 한다 (<a href="https://www.w3schools.com/jsref/met_node_insertbefore.asp" target="_blank" rel="noopener">https://www.w3schools.com/jsref/met_node_insertbefore.asp</a>)</p>
+</li>
+<li><p><strong>normalize()</strong><br>하위 객체중 비어 있는 노드를 지우거나 텍스트 노도를 합치는 등의 정규화를 시킴</p>
+</li>
+<li><p><strong>removeAttribute(‘속성이름’)</strong><br>속성 이름에 해당하는 속성을 제거</p>
+</li>
+<li><p><strong>removeAttributeNS(‘속성이름’, ‘네임스페이스’)</strong><br>속성 이름과 네임스페이스에 해당하는 속성을 제거</p>
+</li>
+<li><p><strong>removeAttributeNode(속성 객체)</strong><br>해당 속성 객체를 지움</p>
+</li>
+<li><p><strong>removeChild(객체)</strong><br>하위 객체 중 정보로 전달 받은 객체를 지움</p>
+</li>
+<li><p><strong>removeEventListener(‘이벤트명’, 실행되는 함수, 캡쳐 사용 여부)</strong><br>이벤트 이름에 등록된 실행되는 함수를 삭제</p>
+</li>
+<li><p><strong>replaceChild(대체할 객체, 대체될 자식 객체)</strong><br>대체될 자식 객체를 지우고 대체할 객체를 그 자리에 삽입</p>
+</li>
+<li><p><strong>scrollIntoView(위쪽 기준인지 아닌지)</strong><br>엘리먼트가 화면에 보이도록 스크롤을 이동</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'button'</span>);</span><br><span class="line">btn.scrollIntoView(<span class="literal">true</span>); -&gt; 선택된 대상이 가장 윗쪽에 위치하도록 스크롤 이동</span><br><span class="line">btn.scrollIntoView(<span class="literal">false</span>); -&gt; 선택된 대상이 가장 아랫 쪽에 위치하도록 스크롤 이동</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>setAttribute(‘속성이름’, ‘속성 값’) == $(‘element’).attr(‘속성이름’, ‘속성 값’)</strong><br>새 속성을 추가하거나 현재 속성을 대체</p>
+</li>
+<li><p><strong>setAttributeNS(‘NS’, ‘속성이름’, ‘속성 값’)</strong><br>네임 스페이스를 갖는 속성을 추가하거나 네임 스페이스와 속성 이름이 같은 속성을 대체</p>
+</li>
+<li><p><strong>setAttributeNode(속성 객체)</strong><br>새 속성을 추가하거나 현재 속성을 대체</p>
+</li>
+<li><p><strong>setAttributeNodeNS(속성 객체)</strong><br>네임 스페이스를 갖는 새 속성을 추가하거나 현재 속성을 대체<br><br></p>
+</li>
+</ul>
+<h3 id="관련된-객체-찾기"><a href="#관련된-객체-찾기" class="headerlink" title="관련된 객체 찾기"></a>관련된 객체 찾기</h3><ul>
+<li>부모 자식 노드<br><strong>parent.node</strong>: 부모 노드<br><strong>childNodes</strong>: 자식 노드</li>
+<li><p>부모 자식 노드 예(html)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnFunc3"</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>func3 - 부모 자식노드<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>부모 자식 노드 예(js)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc3'</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> parent = <span class="keyword">this</span>.parentNode;</span><br><span class="line">  <span class="keyword">var</span> child = <span class="keyword">this</span>.childNodes;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'[parent Node]'</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(parent);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'[child Nodes]'</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(child);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>속성(attribute) 객체<br><strong>setAttribute()</strong></p>
+<ul>
+<li><p>속성(attribute) 객체 예(html)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"func4"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"inpFunc4"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span>=<span class="string">"기본 값"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnFunc4"</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>func4 - 속성변경<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>속성(attribute) 객체 예(js)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc4'</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> inp = <span class="built_in">document</span>.getElementById(<span class="string">'inpFunc4'</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'변경 전 type 속성은 '</span>+inp.getAttribute(<span class="string">'type'</span>));</span><br><span class="line">  inp.setAttribute(<span class="string">'type'</span>, <span class="string">'password'</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'변경 후 type 속성은 '</span>+inp.getAttribute(<span class="string">'type'</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>엘리먼트에 자식 노드 삽입하기<br><strong>appendChild</strong>: 대상 엘리먼트 자식 뒤로 추가<br><strong>insertBefore</strong>: 대상 엘리먼트의 자식 위치를 지정하여 교체</p>
+<ul>
+<li><p>엘리먼트에 자식 노드 삽입하기 예(html)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"func5"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnFunc5-1"</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>func5-1 자식 노드 삽입(append)<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  /</span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnFunc5-2"</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>func5-2 자식 노드 삽입(insertBefore)<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>엘리먼트에 자식 노드 삽입하기 예(js)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func5 = &#123;</span><br><span class="line">  comm: <span class="function"><span class="keyword">function</span> (<span class="params">idx</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> listEle = <span class="built_in">document</span>.createElement(<span class="string">'li'</span>);</span><br><span class="line">    listEle.textContent = idx;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> listEle;</span><br><span class="line">  &#125;,</span><br><span class="line">  comm2: <span class="function"><span class="keyword">function</span> (<span class="params">idx</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 문자열 형태로 생성은 불가</span></span><br><span class="line">    <span class="keyword">var</span> targetEle = <span class="string">'&lt;li&gt;'</span>+idx+<span class="string">'&lt;/li&gt;'</span>;</span><br><span class="line">    <span class="comment">// 가져다 쓰는건 가능</span></span><br><span class="line">    <span class="keyword">var</span> targetEle2 = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>)[<span class="number">0</span>].cloneNode(<span class="literal">true</span>);  <span class="comment">// 매개변수가 true인 경우 하위 내용도 함께 복사</span></span><br><span class="line">    targetEle2.textContent = idx;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> targetEle2</span><br><span class="line">  &#125;,</span><br><span class="line">  btn1: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> targetEle = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'list'</span>)[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> targetList = targetEle.getElementsByTagName(<span class="string">'li'</span>);</span><br><span class="line">    <span class="keyword">var</span> insertList = func5.comm( <span class="built_in">parseInt</span>(targetList[targetList.length<span class="number">-1</span>].textContent) + <span class="number">1</span>);</span><br><span class="line">    <span class="comment">//var insertList = func5.comm2( parseInt(targetList[targetList.length-1].textContent) + 1);</span></span><br><span class="line"></span><br><span class="line">    targetEle.appendChild(insertList);</span><br><span class="line">  &#125;,</span><br><span class="line">  btn2: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> targetEle = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'list'</span>)[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> targetList = targetEle.getElementsByTagName(<span class="string">'li'</span>);</span><br><span class="line">    <span class="comment">//var insertList = func5.comm(targetList[0].textContent - 1);</span></span><br><span class="line">    <span class="keyword">var</span> insertList = func5.comm2(targetList[<span class="number">0</span>].textContent - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    targetEle.insertBefore(insertList, targetList[<span class="number">0</span>]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc5-1'</span>).addEventListener(<span class="string">'click'</span>, func5.btn1);</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc5-2'</span>).addEventListener(<span class="string">'click'</span>, func5.btn2);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h3 id="내용물-바꿔치기"><a href="#내용물-바꿔치기" class="headerlink" title="내용물 바꿔치기"></a>내용물 바꿔치기</h3><ul>
+<li><p><strong>innerHTML</strong><br>선택된 엘리먼트에 변수의 형태로 입력</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="built_in">document</span>.getElementById(<span class="string">'#func6'</span>);</span><br><span class="line">text.innerHTML = <span class="string">'내용을 교체합니다'</span>;</span><br><span class="line">text.innerHTML+= <span class="string">'내용을 추가 합니다'</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>innerHTML 예(html)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"func6"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"inpFunc6"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"내용을 입력해 주세요"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnFunc6"</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>func6 내용 물 바꿔치기(innerHTML)<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"textFunc6"</span>&gt;</span></span><br><span class="line">    내용이 음슴미다</span><br><span class="line">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>innerHTML 객체 예(js)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc6'</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> targetInp = <span class="built_in">document</span>.getElementById(<span class="string">'inpFunc6'</span>);</span><br><span class="line">  <span class="keyword">var</span> targetText = <span class="built_in">document</span>.getElementById(<span class="string">'textFunc6'</span>);</span><br><span class="line"></span><br><span class="line">  targetText.innerHTML = targetInp.value;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>innerHTML 사용 시 완전한 문자열을 최소화하여 추가하는 것을 권장(html)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"func7"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnFunc7"</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>func7 innerHTML 사용 최소화<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"textFunc7"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>innerHTML 사용 시 완전한 문자열을 최소화하여 추가하는 것을 권장(js)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc7'</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> targetText = <span class="built_in">document</span>.getElementById(<span class="string">'textFunc7'</span>);</span><br><span class="line">  <span class="keyword">var</span> content1 = <span class="string">'&lt;a href="http://www.naver.com"'</span>;</span><br><span class="line">  <span class="keyword">var</span> content2 = <span class="string">'&gt; 네이버 링크&lt;'</span>;</span><br><span class="line">  <span class="keyword">var</span> content3 = <span class="string">'/a&gt;'</span>;</span><br><span class="line">  <span class="keyword">var</span> setCont = content1 + content2 + content3;</span><br><span class="line"></span><br><span class="line">  targetText.innerHTML = setCont;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>removeChild()</strong>: 자식 노드를 제거</p>
+<ul>
+<li><p>removeChild 예 (html)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"func8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnFunc8"</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>func8 자식 노드 삭제<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>removeChild 예 (js)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// func8</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc8'</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> targetEle = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'list'</span>)[<span class="number">1</span>];</span><br><span class="line">  <span class="keyword">var</span> targetList = targetEle.childNodes;</span><br><span class="line"></span><br><span class="line">  targetEle.removeChild(targetList[<span class="number">1</span>]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>replaceChild(추가할 항목, 삭제될 대상)</strong></p>
+<ul>
+<li><p>replaceChild 예(html)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"func9"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btnFunc9"</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>func9 자식 노드 교체(1 -&gt; 20)<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>replaceChild 예(js)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'btnFunc9'</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> targetEle = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'list'</span>)[<span class="number">2</span>];</span><br><span class="line">  <span class="keyword">var</span> targetList = targetEle.getElementsByTagName(<span class="string">'li'</span>);</span><br><span class="line">  <span class="keyword">var</span> cloneList = targetList[<span class="number">0</span>].cloneNode(<span class="literal">false</span>);</span><br><span class="line">  cloneList.textContent = <span class="string">'20'</span>;</span><br><span class="line"></span><br><span class="line">  targetEle.replaceChild(cloneList, targetList[<span class="number">0</span>]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h3 id="사용-예-전체-코드"><a href="#사용-예-전체-코드" class="headerlink" title="사용 예 전체 코드"></a>사용 예 전체 코드</h3><hr>
+   <iframe scrolling="no" width="100%" height="500px" src="//jsfiddle.net/rs83Lexz/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe>
+</div><div class="article-meta" style="max-width:800px"><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/">study</a><span class="category-list-count">37</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/es5/">es5</a><span class="category-list-count">3</span></li></ul></li></ul></div></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjk924uge000aawwcrj40ystx" data-title="(ES5) - DOM Script" data-url="http://windfanta.github.io/blog/blog/2017/09/12/study-es5-7/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/blog/2017/09/13/study-es6-2/"><i class="icon icon-arror-left"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/BoizZ" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="https://weibo.com/heqibang" title="Weibo" target="_blank"><i class="icon icon-weibo"></i></a></li><li><a href="https://www.segmentfault.com/u/bon" title="SegmentFault" target="_blank"><i class="icon icon-segmentfault"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 windfanta.github.io/blog/<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>

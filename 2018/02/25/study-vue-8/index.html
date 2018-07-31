@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>(vue.js) - 08 사용자 정의 이벤트 - windfanta.github.io/blog/</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com"><span>Github</span></a></li><li><a href="https://www.v2ex.com/"><span>V2EX</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">(vue.js) - 08 사용자 정의 이벤트</h1><ul class="meta"><li><i class="icon icon-author"></i>SUNGMIN SHIN</li><li><i class="icon icon-clock"></i>4 Minutes</li><li><i class="icon icon-calendar"></i>2018년 2월 25일</li></ul></div></div><div class="article-content" style="max-width:800px"><hr>
+<h1 id="Vue-js-2-프로그래밍"><a href="#Vue-js-2-프로그래밍" class="headerlink" title="[ Vue.js 2 프로그래밍  ]"></a>[ Vue.js 2 프로그래밍  ]</h1><p>(<a href="http://book.naver.com/bookdb/book_detail.nhn?bid=12320270" target="_blank" rel="noopener">http://book.naver.com/bookdb/book_detail.nhn?bid=12320270</a>)</p>
+<hr>
+<p><br></p>
+<h1 id="8-사용자-정의-이벤트"><a href="#8-사용자-정의-이벤트" class="headerlink" title="8. 사용자 정의 이벤트"></a>8. 사용자 정의 이벤트</h1><p>때때로 사용자 정의 이벤트가 필요할 때가 있습니다. 이를 위해 vue 인스턴스 메서드를 사용할 수 있습니다. 모든 vue 인스턴스는 이벤트 인터페이스를 구현하고 있습니다.</p>
+<blockquote>
+<p>Vue 이벤트 인터페이스<br>(<a href="https://kr.vuejs.org/v2/api/index.html#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EB%A9%94%EC%86%8C%EB%93%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8" target="_blank" rel="noopener">https://kr.vuejs.org/v2/api/index.html#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EB%A9%94%EC%86%8C%EB%93%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8</a>)</p>
+</blockquote>
+<p>이는 다음을 의미합니다.</p>
+<blockquote>
+<ul>
+<li>$on(event)를 이용해 이벤트 청취</li>
+<li>$emit(event)를 이용해 이벤트 발생</li>
+<li>$once(event)를 이용해 이벤트를 한번만 청취</li>
+<li>$off(event)를 이용해 이벤트 리스너를 제거</li>
+</ul>
+</blockquote>
+<p><br></p>
+<h2 id="8-1-발생과-정취"><a href="#8-1-발생과-정취" class="headerlink" title="8.1 발생과 정취"></a>8.1 발생과 정취</h2><hr>
+<p><strong>예제</strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/5uqpj94w/6/embedded/html,js,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p>위 예제에서 리스너를 created라는 생명주기 훅(lifecycle hook)내에 등록합니다. this는 vote 메서드와 created 훅 내에서 vue 인스턴스에 바인딩 돼 있습니다. 그래서 this.$on과 this.$emit을 사용해 $on과 $emit함수에 접근할 수 있습니다.</p>
+<p><img src="http://windfanta.ivyro.net/github/imgs/study-vue-8-1.png" alt="console에서 this를 찍어보면"></p>
+<h3 id="생명주기-훅-Lifecycle-hook"><a href="#생명주기-훅-Lifecycle-hook" class="headerlink" title="생명주기 훅(Lifecycle hook)"></a>생명주기 훅(Lifecycle hook)</h3><p>생명주기 훅(라이프사이클 훅)은 Vue관련 이벤트가 발생할 때 실행되는 함수 입니다.</p>
+<blockquote>
+<p>Vue의 생명주기 훅 목록<br>(<a href="https://kr.vuejs.org/v2/guide/instance.html#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4-%ED%9B%85" target="_blank" rel="noopener">https://kr.vuejs.org/v2/guide/instance.html#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4-%ED%9B%85</a>)</p>
+</blockquote>
+<p><br></p>
+<h2 id="8-2-부모-자식-간-통신"><a href="#8-2-부모-자식-간-통신" class="headerlink" title="8.2 부모-자식 간 통신"></a>8.2 부모-자식 간 통신</h2><hr>
+<p>부모 컴포넌트가 자식 컴포넌트의 이벤트를 청취할 필요가 있을 때는 상황이 약간 달라집니다. <strong>this가 각기 다른 인스턴스에 바인딩될 것이기 때문에</strong> this.$on / this.$emit을 사용할 수 없습니다.</p>
+<p>부모 컴포넌트는 자식 컴포넌트가 사용되는 템플릿에서 곧바로 v-on을 사용해서 자식 컴포넌트에 발생한 이벤트를 직접 청취할 수 있습니다.</p>
+<blockquote>
+<p>v-on<br>(<a href="https://kr.vuejs.org/v2/api/index.html#v-on" target="_blank" rel="noopener">https://kr.vuejs.org/v2/api/index.html#v-on</a>)</p>
+</blockquote>
+<iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/pj29kd5m/7/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe>
+<p>위 예제에서 <strong>@voted=”countVote”는 자식(food)의 ‘voted’이벤트가 발생할 때 countVote 메서드가 실행된다는 것을 의미</strong>합니다.</p>
+<p><br></p>
+<h2 id="8-3-인자-전달"><a href="#8-3-인자-전달" class="headerlink" title="8.3 인자 전달"></a>8.3 인자 전달</h2><hr>
+<p>이번 예제에서는 각 인스턴스마다 투표 수를 가질 것이며 음식이 투표를 받으면 투표 수가 증가하고, 부모 컴포넌트에도 있는 총 투표 수를 갱신하기 위한 이벤트가 발생할 것입니다.</p>
+<p><strong> 항목별 득표 수 </strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/80u2xs0d/7/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><strong> 로그 추가 </strong><br><iframe scrolling="no" width="100%" height="300px" src="//jsfiddle.net/SUNGMIN_SHIN/gc1gba2L/5/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p>
+</div><div class="article-meta" style="max-width:800px"><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/">study</a><span class="category-list-count">37</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/vue-js/">vue.js</a><span class="category-list-count">6</span></li></ul></li></ul></div></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjk924uni0047awwcmhrkna42" data-title="(vue.js) - 08 사용자 정의 이벤트" data-url="http://windfanta.github.io/blog/blog/2018/02/25/study-vue-8/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/blog/2018/03/05/study-jquery-9/"><i class="icon icon-arror-left"></i></a></li><li><a href="/blog/2018/02/20/study-sass-1/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/BoizZ" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="https://weibo.com/heqibang" title="Weibo" target="_blank"><i class="icon icon-weibo"></i></a></li><li><a href="https://www.segmentfault.com/u/bon" title="SegmentFault" target="_blank"><i class="icon icon-segmentfault"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 windfanta.github.io/blog/<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>

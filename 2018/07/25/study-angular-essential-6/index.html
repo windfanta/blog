@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>Angular essentials - Angular의 파일 구조와 처리 흐름 - windfanta.github.io/blog/</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com"><span>Github</span></a></li><li><a href="https://www.v2ex.com/"><span>V2EX</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">Angular essentials - Angular의 파일 구조와 처리 흐름</h1><ul class="meta"><li><i class="icon icon-author"></i>SUNGMIN SHIN</li><li><i class="icon icon-clock"></i>8 Minutes</li><li><i class="icon icon-calendar"></i>2018년 7월 25일</li></ul></div></div><div class="article-content" style="max-width:800px"><h1 id="Angular-essentials"><a href="#Angular-essentials" class="headerlink" title="Angular essentials"></a>Angular essentials</h1><p>(<a href="https://book.naver.com/bookdb/book_detail.nhn?bid=13761643" target="_blank" rel="noopener">https://book.naver.com/bookdb/book_detail.nhn?bid=13761643</a>)</p>
+<p><br></p>
+<h2 id="06-Angular의-파일-구조와-처리-흐름"><a href="#06-Angular의-파일-구조와-처리-흐름" class="headerlink" title="06. Angular의 파일 구조와 처리 흐름"></a>06. Angular의 파일 구조와 처리 흐름</h2><p><br></p>
+<h3 id="6-1-Angular-어플리케이션의-파일-구조"><a href="#6-1-Angular-어플리케이션의-파일-구조" class="headerlink" title="6.1 Angular 어플리케이션의 파일 구조"></a>6.1 Angular 어플리케이션의 파일 구조</h3><p>angular는 프레임워크 이므로 웹 애플리케이션 구축에 기본적으로 필요한 기능의 구현체를 정형화된 구조로 제공한다. 이를 바탕으로 우리의 애플리케이션에 요구되는 기능을 추가하는 방식으로 애플리케이션을 완성해 간다. 따라서 프레임워크의 학습은 정형화된 프레임 워크의 구조에 익숙해지는 것으로 시작한다.</p>
+<p><br></p>
+<h4 id="6-1-1-src-폴더"><a href="#6-1-1-src-폴더" class="headerlink" title="6.1.1 src 폴더"></a>6.1.1 src 폴더</h4><p>src 폴더는 Angular의 모든 구성요소, 공통 CSS, 이미지나 폰트와 같은정적 파일, 설정 파일등 애플리케이션의 필수 파일을 담고 있다. 개발자가 작성하는 대부분의 파일이 이곳에 포함된다.</p>
+<hr>
+
+<ul>
+<li><strong>app/app.component.(ts, html, css, spec.ts)</strong> : 모든 컴포넌트의 부모 컴포넌트인 루트 컴포넌트를 구성하는 컴포넌트 클래스, 템플릿, CSS, 유닛 테스트용 스펙 파일</li>
+<li><strong>app/app.module.ts</strong> : Angular의 모든 구성요소를 등록하는 루트 모듈</li>
+<li><strong>assets/</strong> : 이미지, 폰트와 같은 정적 파일을 위한 폴더</li>
+<li><strong>environments/</strong> : 프로젝트 빌드 시에 사용될 프로덕션/개발용 환경 설정 파일이 담겨있는 폴더 </li>
+<li><strong>browserslist/</strong> : autoprefixer, babel과 같은 프런트엔드 도구 간의 적용 대상 브라우저를 공유하는 <a href="https://github.com/browserslist/browserslist" target="_blank" rel="noopener">browserslist</a> 의 설정 파일</li>
+<li><strong>favicon.ico</strong> : 파비콘 파일</li>
+<li><strong>index.html</strong> : 웹 어플리케이션에 방문 시 처음으로 로딩되는 디폴트 페이지, 루트 컴포넌트(app.component.*)의 셀렉터(\&lt;app-root>)에 의해 루트 컴포넌트의 뷰가 로드되어 브라우저에 표시된다. (빌드 시에는 번들링된 자바스크립트 파일이 자동 추가된 index.html이 dist 폴더에 생성 됨)</li>
+<li><strong>karma.conf</strong> : <a href="https://karma-runner.github.io" target="_blank" rel="noopener">karma test runner</a> 를 위한 설정 파일로 ng test 명령어 실행 시 참조 됨</li>
+<li><strong>main.ts</strong> : 프로젝트의 메인 진입점, 루트 모듈(AppModule)을 사용하여 애플리케이션의 <a href="https://ko.wikipedia.org/wiki/%EB%B6%80%ED%8A%B8%EC%8A%A4%ED%8A%B8%EB%9E%A9" target="_blank" rel="noopener">부트스트랩</a>(기동) 한다.</li>
+<li><strong>polyfills.ts</strong> : 크로스 브라우징을 위한 <a href="https://ko.wikipedia.org/wiki/%ED%8F%B4%EB%A6%AC%ED%95%84_\(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D\" target="_blank" rel="noopener">폴리필</a>) 들을 임포트하는 역활을 한다.</li>
+<li><strong>styles.css</strong> : 애플리케이션 전역에 적용되는 글로벌 CSS파일</li>
+<li><strong>test.ts</strong> : 유닛 테스트를 위한 메인 진입점</li>
+<li><strong>tsconfig.(app|spec).json</strong> : TypeScript 컴파일 옵션 설정 파일</li>
+<li><strong>typings.d.ts</strong> : TypeScript를 위한 타입 선언 파일</li>
+</ul>
+<hr>
+
+<p><br></p>
+<h4 id="6-1-2-기타-설정-파일"><a href="#6-1-2-기타-설정-파일" class="headerlink" title="6.1.2 기타 설정 파일"></a>6.1.2 기타 설정 파일</h4><hr>
+
+<ul>
+<li><strong>e2e/</strong> : e2e(end-to-end) 테스트 관련 파일을 위한 폴더</li>
+<li><strong>node_modules/</strong> : package.json에 등록된 의존 모듈이 패키지 매니저에 의해 설치되는 의존 모듈 저장소</li>
+<li><strong>.editorconfig</strong> : 코드 에디터 기본 설정 파일 (<a href="https://editorconfig.org/" target="_blank" rel="noopener">https://editorconfig.org/</a>)</li>
+<li><strong>.gitignore</strong> : git 소스 관리 제외 대상을 위한 설정 파일</li>
+<li><strong>angular.json</strong> : Angular CLI를 위한 설정 파일</li>
+<li><strong>package.json</strong> : 의존 모듈 관리를 위해 패키지 매니저(npm, yarn등)가 사용하는 모듈 관리 파일</li>
+<li><strong>README.md</strong> : 프로젝트의 개요를 기술한 README 파일, Angular CLI가 기본적인 내용을 자동 생성</li>
+<li><strong>tsconfig.json</strong> : TypeScript 컴파일 옵션 설정 파일</li>
+<li><strong>tslint.json</strong> : <a href="https://palantir.github.io/tslint/" target="_blank" rel="noopener">TSLint</a>가 사용하는 linting(구문 체크) 설정 파일로 ng init 명령어 실행 시 참조</li>
+</ul>
+<hr>
+
+<p><br></p>
+<h3 id="6-2-Angular-애플리케이션의-처리-흐름"><a href="#6-2-Angular-애플리케이션의-처리-흐름" class="headerlink" title="6.2 Angular 애플리케이션의 처리 흐름"></a>6.2 Angular 애플리케이션의 처리 흐름</h3><p><img src="https://poiemaweb.com/img/angular-process.png" alt="Angular 어플리케이션의 처리 흐름"></p>
+<h5 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h5><p>웹 브라우저가 가장 먼저 로딩하는 프로젝트 파일로 경로는 /my-app/dist/index.html 이지만 이 것은 /my-app/src/index.html이 ng build 명령어로 자바스크립트 파일이 추가 되어 자동 생성된 파일이다.</p>
+<blockquote>
+<p>Angular 애플리케이션을 기동하기 위해서는 수 많은 의존성 모듈(@angular/*, core-js, zone.js, Rxjs.js 등등)과 TypeScript 파일의 컴파일 결과물인 자바스크립트 파일을 로드할 필요가 있는데 Angular는 모듈 번들러 webpack을 사용하여 의존성 모듈과 자바스크립트 파일을 번들링한 후, 수작업 없이 간편하게 로드할 수 있도록 자동화 기능을 제공한다.</p>
+</blockquote>
+<p>번들링의 결과물로 생성된 JS파일들이 로드되어 실행되면서 Angular 애플리케이션은 동작하기 시작한다. 번들링된 JS파일은 아래와 같다.</p>
+<ul>
+<li>main.js</li>
+<li>polyfills.js</li>
+<li>styles.js</li>
+<li>vendor.js</li>
+<li>runtime.js</li>
+</ul>
+<p><br></p>
+<h4 id="main-ts"><a href="#main-ts" class="headerlink" title="main.ts"></a>main.ts</h4><p>main.ts는 프로젝트의 메인 진입점(main entry point)로 루트 모듈(/src/app/app.modules.ts)을 사용하여 애플리케이션을 기동(부트스트랩) 한다.<br>(main.ts는 angular.json의 main프로퍼티의 설정에 의해 로드 된다.)</p>
+<p><br></p>
+<h4 id="app-modules-ts"><a href="#app-modules-ts" class="headerlink" title="app.modules.ts"></a>app.modules.ts</h4><p>@NgModule 데코레이터의 인자로 전달되는 메타데이터에 애플리케이션 전체의 설정 정보를 기술한 루트 모듈, 루트 모듈은 루트 컴포넌트 (/src/app/app.component.ts)를 기동(부트스트랩)한다.</p>
+<p><br></p>
+<h4 id="app-component-ts"><a href="#app-component-ts" class="headerlink" title="app.component.ts"></a>app.component.ts</h4><p>모든 컴포넌트의 부모 역활을 담당하는 루트 컴포넌트로 my-app 프로젝트의 경우 /dist/index.html 의 \&lt;app-root>에 의해 루트 컴포넌트의 뷰가 로드 되어 콘텐츠(\&lt;app-root>의 콘텐츠)로 브라우저에 표시된다.</p>
+<p><br></p>
+<h3 id="6-3-Angular의-구성요소"><a href="#6-3-Angular의-구성요소" class="headerlink" title="6.3 Angular의 구성요소"></a>6.3 Angular의 구성요소</h3><p>Angular 애플리케이션의 아래의 구성요소를 조합하여 구축한다.</p>
+<blockquote>
+<p><strong>컴포넌트(component)</strong><br>  컴포넌트는 켐플릿과 메타 데이터, 컴포넌트 클래스로 구성되며 데이터 바인딩에 의해 연결된다.<br>  <strong>컴포넌트는 화면을 구성하는 뷰(view)를 생성하고 관리하는 것이 주된 역활이며 화면은 1개 이상의 컴포넌트를 조립하여 구성한다.</strong></p>
+</blockquote>
+<p><br></p>
+<blockquote>
+<p><strong>디렉티브(Directive)</strong><br>  <strong>애플리케이션 전역에서 사용할 수 있는 뷰에 관련한 공통 관심사를 컴포넌트에서 분리하여 구현한 것으로 컴포넌트의 복잡도를 낮추고 가독성을 높인다.</strong><br>  구조 디렉티브(structual directive), 어트리뷰트 디렉티브(attribute directive)로 구분할 수 있으며 큰 틀에서 컴포넌트 또한 디렉티브로 구분할 수 있다.</p>
+</blockquote>
+<p><br></p>
+<blockquote>
+<p><strong>서비스(Service))</strong><br>  다양한 목적의 애플리케이션 공통 로직을 담당한다. 컴포넌트에서 애플리케이션 전역 관심사를 분리하기 위해 사용되며 의존성 주입(dependency injection)이 가능한 클래스로 작성</p>
+</blockquote>
+<p><br></p>
+<blockquote>
+<p><strong>라우터(Router)</strong><br>  컴포넌트를 교체하는 방법으로 뷰를 전환하여 화면 간 이동을 구현</p>
+</blockquote>
+<p><br></p>
+<blockquote>
+<p><strong>모듈(NgModule)</strong><br>  기능적으로 관련된 구성 요소를 하나의 단위로 묶는 메커니즘을 말한다. 모듈은 관련이 있는 기능들이 응집된 기능 블록으로 애플리케이션을 구성하는 하나의 단위를 만들며 모듈은 다른 모듈과 결합할 수 있으며 Angular는 여러 모듈을 조합하여 애플리케이션을 구성한다.<br>  <strong>컴포넌트, 디렉티브, 파이프, 서비스등의 Angular 구성요소는 모듈에 등록되어야 사용할 수 있다.</strong></p>
+</blockquote>
+<p><br></p>
+<p><img src="https://poiemaweb.com/img/angular-process.png" alt="Angular 구성 요소와 아키텍처"></p>
+<p>Angular는 컴포넌트를 중심으로 Angular 구성요소를 조합하여 애플리케이션을 구축한다.</p>
+<ul>
+<li>뷰를 담당하는 컴포넌트를 중심으로 화면을 구성</li>
+<li>디렉티브와 서비스를 사용하여 애플리케이션 전역의 관심사를 분리하고 컴포넌트는 필요 시 디렉티브와 서비스를 사용</li>
+<li>라우터는 컴포넌트를 교체하는 방식으로 뷰를 전환하여 화면 간 이동을 구현</li>
+<li>모듈은 관련된 구성요소를 하나로 묶어 애플리케이션을 구성하는 하나의 단위를 만드는 역활을 함</li>
+</ul>
+</div><div class="article-meta" style="max-width:800px"><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/">study</a><span class="category-list-count">37</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/angular/">angular</a><span class="category-list-count">3</span></li></ul></li></ul></div></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjk924ufz0000awwcyagxhxus" data-title="Angular essentials - Angular의 파일 구조와 처리 흐름" data-url="http://windfanta.github.io/blog/blog/2018/07/25/study-angular-essential-6/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/blog/2018/07/27/study-angular-essential-7/"><i class="icon icon-arror-left"></i></a></li><li><a href="/blog/2018/07/23/study-angular-essential-4/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/BoizZ" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="https://weibo.com/heqibang" title="Weibo" target="_blank"><i class="icon icon-weibo"></i></a></li><li><a href="https://www.segmentfault.com/u/bon" title="SegmentFault" target="_blank"><i class="icon icon-segmentfault"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 windfanta.github.io/blog/<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>자바스크립트 jquery 완전정복 스터디 2 CH7 이벤트 다루기 - windfanta.github.io/blog/</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com"><span>Github</span></a></li><li><a href="https://www.v2ex.com/"><span>V2EX</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">자바스크립트 jquery 완전정복 스터디 2 CH7 이벤트 다루기</h1><ul class="meta"><li><i class="icon icon-author"></i>SUNGMIN SHIN</li><li><i class="icon icon-clock"></i>9 Minutes</li><li><i class="icon icon-calendar"></i>2018년 3월 22일</li></ul></div></div><div class="article-content" style="max-width:800px"><h1 id="자바스크립트-jQuery-완전정복-스터디-2"><a href="#자바스크립트-jQuery-완전정복-스터디-2" class="headerlink" title="[ 자바스크립트+jQuery 완전정복 스터디 2 ]"></a>[ 자바스크립트+jQuery 완전정복 스터디 2 ]</h1><p>(<a href="http://book.naver.com/bookdb/book_detail.nhn?bid=9650875" target="_blank" rel="noopener">http://book.naver.com/bookdb/book_detail.nhn?bid=9650875</a>)</p>
+<p><br></p>
+<h1 id="CH7-이벤트-다루기"><a href="#CH7-이벤트-다루기" class="headerlink" title="CH7 이벤트 다루기"></a>CH7 이벤트 다루기</h1><hr>
+<p><br></p>
+<h2 id="lesson-01-이벤트-소개"><a href="#lesson-01-이벤트-소개" class="headerlink" title="lesson 01 - 이벤트 소개"></a>lesson 01 - 이벤트 소개</h2><hr>
+<h3 id="01-이벤트란"><a href="#01-이벤트란" class="headerlink" title="01_이벤트란?"></a>01_이벤트란?</h3><p>책 P242 참고</p>
+<p><br></p>
+<h3 id="02-이벤트-종류"><a href="#02-이벤트-종류" class="headerlink" title="02_이벤트 종류"></a>02_이벤트 종류</h3><blockquote>
+<ol>
+<li><em>마우스 이벤트</em><br>사용자가 마우스 버튼을 눌렀을 때 발생하는 이벤트, 화면상에서 마우스 버튼이 눌린 위치, ctrl키 또는 alt키를 누른 상태에서 마우스 버튼을 눌렀는지를 나타내는 정보가 담깁니다.<br><br></li>
+<li><em>키보드 이벤트</em><br>사용자가 키보드를 눌렀을 때 발생하는 이벤트로 이때 눌린 키에 대한 정보가 이벤트에 담깁니다.<br><br></li>
+<li><em>태그요소 고유 이벤트</em><br>엘리먼트마다 발생하는 고유의 이벤트로 예를 들어 ‘img’태그 요소의 경우 이미지가 모두 로드되면 load 이벤트를 발생시켜 이미지가 로드 됐음을 알리며 ‘input’ 태그 요소는 입력한 정보가 바뀌면 change 이벤트를 발생 시켜 입력 정보가 변경됐음을 알립니다.<br><br></li>
+<li><em>사용자 정의 이벤트</em><br>개발자가 직접 만들어서 사용하는 이벤트, 주로 개발자 고유 라이브러리 또는 클래스를 만들고 이를 사용한 어떤 작업이 끝났음을 사용자에게 알려줄 때 개발자만의 이벤트를 만들어 사용합니다.</li>
+</ol>
+</blockquote>
+<p><br></p>
+<h3 id="03-이벤트-단계"><a href="#03-이벤트-단계" class="headerlink" title="03_이벤트 단계"></a>03_이벤트 단계</h3><p>자바스크립트 이벤트를 이해하려면 이벤트 흐름을 반드시 알고 있어야 합니다.<br>이벤트는 크게 3단계에 걸쳐 발생합니다.</p>
+<ol>
+<li>캡쳐 단계</li>
+<li>타깃 단계</li>
+<li>버블링 단계</li>
+</ol>
+<blockquote>
+<p>참고 - JAVASCRIPT EVENT PHASE 이벤트<br><a href="http://derveljunit.tistory.com/236" target="_blank" rel="noopener">http://derveljunit.tistory.com/236</a></p>
+</blockquote>
+<iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/SUNGMIN_SHIN/2o0rfsfd/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe>
+<p><em>메모</em></p>
+<blockquote>
+<ol>
+<li>이벤트 흐름<br>이벤트 흐름은 오직 DOM노드 객체를 따라 이동하며 사용자가 만든 객체에서는 절대 일어나지 않을뿐더러 이벤트를 흐르게 할 수도 없습니다.<br><br></li>
+<li>event.Phase 프로퍼티<br>예제 코드에서 event.Phase는 이벤트 단계를 알 수 있는 프로퍼티 입니다.<br>0 - none<br>1 - 캡쳐<br>2 - 타겟<br>3 - 버블링</li>
+</ol>
+</blockquote>
+<p><br></p>
+<h4 id="단계-01-캡처-Capture-단계"><a href="#단계-01-캡처-Capture-단계" class="headerlink" title="단계 01_캡처(Capture) 단계"></a>단계 01_캡처(Capture) 단계</h4><h5 id="01-설명"><a href="#01-설명" class="headerlink" title="01_설명"></a>01_설명</h5><p>가장 먼저 실행되는 이벤트 단계로서, 이벤트 흐름은 가장 취상위 노드인 document에서 시작해 html태그와 body태그를 거쳐 실제 이벤트를 발생시킨 #b2 노드 전까지 흐르게되며 이단계를 캡쳐 단계라고 부릅니다.<br>이때 지나오며 만나는 노드 중 캡쳐 단계에 이벤트 리스너가 등록돼 있다면 이벤트 리스너가 실행됩니다.</p>
+<p><br></p>
+<h5 id="02-이벤트-등록-방법"><a href="#02-이벤트-등록-방법" class="headerlink" title="02_이벤트 등록 방법"></a>02_이벤트 등록 방법</h5><blockquote>
+<p>Javascript<br>var eleBtn = document.getElementById(‘#btn’); // 대상<br>eleBtn.addEventListener(‘이벤트명’, 리스터, true);</p>
+</blockquote>
+<blockquote>
+<p>jQuery<br>$대상.get(0).addEventListener(‘이벤트명’, 리스너, true);</p>
+</blockquote>
+<p>jQuery에 경우 캡쳐 단계에 이벤트를 등록하는 기능을 제공하지 않아 위와 같이 자바스크립트의 DOM에 접근해 자바스크립트 방식을 이벤트를 등록해야 합니다.</p>
+<p><br></p>
+<h5 id="03-캡쳐-단계의-용도"><a href="#03-캡쳐-단계의-용도" class="headerlink" title="03_캡쳐 단계의 용도"></a>03_캡쳐 단계의 용도</h5><p>캡쳐 단계의 용도는 주로 타깃/버블링 단계의 이벤트 실행 전에 처리해야할 사전 작업 또는 타깃/버블링 단계 이벤트를 제어하는 용도로 아주 가끔 사용합니다.</p>
+<p><br></p>
+<h4 id="단계-02-타깃-target-단계"><a href="#단계-02-타깃-target-단계" class="headerlink" title="단계 02_타깃(target) 단계"></a>단계 02_타깃(target) 단계</h4><h5 id="01-설명-1"><a href="#01-설명-1" class="headerlink" title="01_설명"></a>01_설명</h5><p>타깃 단계는 이벤트 흐름이 이벤트를 발생시킨 노드에 머무르는 단계를 말하며 이때 이벤트를 발생시킨 노드에 이벤트가 등록되어 있다면 리스너가 실행됩니다.</p>
+<p><br></p>
+<h5 id="02-이벤트-등록-방법-1"><a href="#02-이벤트-등록-방법-1" class="headerlink" title="02_이벤트 등록 방법"></a>02_이벤트 등록 방법</h5><blockquote>
+<p>Javascript<br>var eleBtn = document.getElementById(‘#btn’); // 대상<br>eleBtn.addEventListener(‘이벤트명’, 리스터, false);</p>
+</blockquote>
+<blockquote>
+<p>jQuery<br>$(대상).on(‘이벤트이름’, 리스너);</p>
+</blockquote>
+<p><br></p>
+<h4 id="단계-03-버블-bubble-단계"><a href="#단계-03-버블-bubble-단계" class="headerlink" title="단계 03_버블(bubble) 단계"></a>단계 03_버블(bubble) 단계</h4><h5 id="01-설명-2"><a href="#01-설명-2" class="headerlink" title="01_설명"></a>01_설명</h5><p><em>버블 단계는 캡처 단계의 역순으로 흐르는 단계를 의미합니다.</em><br>그리고 이 흐름을 버블링(bubbling)이라고 부릅니다.</p>
+<p><strong>버블링의 예</strong><br><iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/SUNGMIN_SHIN/kjkp54xu/6/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<p><br></p>
+<h5 id="02-이벤트-등록-방법-2"><a href="#02-이벤트-등록-방법-2" class="headerlink" title="02_이벤트 등록 방법"></a>02_이벤트 등록 방법</h5><blockquote>
+<p>Javascript<br>var eleBtn = document.getElementById(‘#btn’); // 대상<br>eleBtn.addEventListener(‘이벤트명’, 리스터, false);</p>
+</blockquote>
+<blockquote>
+<p>jQuery<br>$(대상).on(‘이벤트이름’, 리스너);</p>
+</blockquote>
+<p><em>타깃 단계와 버블 단계에 이벤트를 등록하는 방법은 동일합니다.</em><br>타깃 단계인지 버블 단계인지 구분할때는 Event 객체와 eventPhase 속성을 사용하면 됩니다.</p>
+<p><strong>eventPhase속성을 통한 버블링 차단</strong><br><iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/SUNGMIN_SHIN/w02kbeut/3/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p>
+<blockquote>
+<p>JS 버블링(Bubbling) &amp; 캡쳐링(Capturing)<br><a href="https://project42da.github.io/js/2017/01/30/js-bubblingcapturing/" target="_blank" rel="noopener">https://project42da.github.io/js/2017/01/30/js-bubblingcapturing/</a></p>
+</blockquote>
+<p><br></p>
+<h2 id="lesson-02-핵심-내용"><a href="#lesson-02-핵심-내용" class="headerlink" title="lesson 02 - 핵심 내용"></a>lesson 02 - 핵심 내용</h2><hr>
+<h3 id="01-일반-이벤트-등록"><a href="#01-일반-이벤트-등록" class="headerlink" title="01_일반 이벤트 등록"></a>01_일반 이벤트 등록</h3><blockquote>
+<p>$대상.on(‘이벤트이름’, 리스너)</p>
+</blockquote>
+<p><em>참고</em></p>
+<blockquote>
+<p>jQuery 버전 1.6까지는 bind() 메서드를 사용했지만 1.7이후 on()으로 변경되었습니다. 이와 동시에 live(), delegate() 등의 이벤트 메서드도 on()에 통합되었습니다.</p>
+</blockquote>
+<p><br></p>
+<h3 id="02-단축-이벤트-등록"><a href="#02-단축-이벤트-등록" class="headerlink" title="02_단축 이벤트 등록"></a>02_단축 이벤트 등록</h3><blockquote>
+<p>$대상.단축이벤트(리스너)</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// on() 메서드 사용</span></span><br><span class="line">$(<span class="string">'button'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  alert(<span class="string">'hello'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 단축 메서드 click() 사용</span></span><br><span class="line">$(<span class="string">'button'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  alert(<span class="string">'hello'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>jQuery에서는 일반적으로 많이 사용하는 이벤트를 좀 더 쉽게 사용할 수 있게 단축 이벤트 메서드를 가지고 있습니다.<br>예를 들어 click이벤트를 등록하는 경우 단축 이벤트 메서드를 사용하면 다음과 같이 click() 메서드를 이용해 간결하게 처리할 수 있습니다.</p>
+<blockquote>
+<p>단축 이벤트 메서드 내부에서는 on() 메서드를 사용하기 때문에 두 방법 중 여러분이 편한 방법을 사용하면 됩니다.</p>
+</blockquote>
+<blockquote>
+<p>jQuery 이벤트 목록<br><a href="https://api.jquery.com/category/events/" target="_blank" rel="noopener">https://api.jquery.com/category/events/</a></p>
+</blockquote>
+<p><br></p>
+<h3 id="03-등록한-이벤트-제거"><a href="#03-등록한-이벤트-제거" class="headerlink" title="03_등록한 이벤트 제거"></a>03_등록한 이벤트 제거</h3><blockquote>
+<p>지정한 이벤트(click등) 중 특정 리스너 제거<br>$대상.off(‘이벤트이름’, 삭제하고 싶은 리스너 명)<br><br><br>지정한 이벤트(click등) 제거<br>$대상.off(‘이벤트이름’)<br><br><br>대상의 이벤트 전부 제거<br>$대상.off(‘이벤트이름’)</p>
+</blockquote>
+<p><br></p>
+<h3 id="04-이벤트-한-번만-실행"><a href="#04-이벤트-한-번만-실행" class="headerlink" title="04_이벤트 한 번만 실행"></a>04_이벤트 한 번만 실행</h3><blockquote>
+<p>$대상.one(‘이벤트이름’, 리스너)</p>
+</blockquote>
+<p>one()메서드를 통해 등록된 이벤트 리스너는 한번 실행되고 자동 제거 됩니다.</p>
+<h3 id="05-기본-행동-취소"><a href="#05-기본-행동-취소" class="headerlink" title="05_기본 행동 취소"></a>05_기본 행동 취소</h3><blockquote>
+<p>event.preventDefault()</p>
+</blockquote>
+<p>a태그 클릭 시 click이벤트 발생 후 해당 링크로 이동하게 되는 데 여기서 해당 링크로 이동하는 행동을 기본행동이라고 합니다.</p>
+<p>모든 이벤트가 기본 행동을 취소할 수 있는 건 아닙니다. 이벤트 발생 후 실행되는 기본행동이 알려면 이벤트 객체의 cancelable 프로퍼티의 값을 확인하는 것으로 알 수 있으며 값이 true인 경우 기본 행동이 실행된다는 의미 입니다.</p>
+<iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/SUNGMIN_SHIN/4ew5hbtd/4/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe>
+<p>기본행동 관련속성 P264 ~ 확인</p>
+</div><div class="article-meta" style="max-width:800px"><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/">study</a><span class="category-list-count">37</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/jquery/">jquery</a><span class="category-list-count">12</span></li></ul></li></ul></div></div><div class="article-comment" style="max-width:800px"><div class="ds-thread" id="ds-thread" data-thread-key="cjk924ugv000uawwcijzzfnqu" data-title="자바스크립트 jquery 완전정복 스터디 2 CH7 이벤트 다루기" data-url="http://windfanta.github.io/blog/blog/2018/03/22/study-jquery-11/" site-name="ueibo"></div><script>var siteName = document.getElementById('ds-thread').getAttribute('site-name');
+var duoshuoQuery = {short_name: siteName};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();</script></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/blog/2018/03/30/study-css/"><i class="icon icon-arror-left"></i></a></li><li><a href="/blog/2018/03/19/study-jquery-10/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/BoizZ" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="https://weibo.com/heqibang" title="Weibo" target="_blank"><i class="icon icon-weibo"></i></a></li><li><a href="https://www.segmentfault.com/u/bon" title="SegmentFault" target="_blank"><i class="icon icon-segmentfault"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 windfanta.github.io/blog/<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>
