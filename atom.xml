@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://windfanta.github.io/"/>
+  <link href="http://windfanta.github.io/blog/"/>
   <updated>2018-07-30T02:08:18.021Z</updated>
-  <id>http://windfanta.github.io/</id>
+  <id>http://windfanta.github.io/blog/</id>
   
   <author>
     <name>SUNGMIN SHIN</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Angular essentials - 컴포넌트</title>
-    <link href="http://windfanta.github.io/2018/07/27/study-angular-essential-7/"/>
-    <id>http://windfanta.github.io/2018/07/27/study-angular-essential-7/</id>
+    <link href="http://windfanta.github.io/blog/2018/07/27/study-angular-essential-7/"/>
+    <id>http://windfanta.github.io/blog/2018/07/27/study-angular-essential-7/</id>
     <published>2018-07-27T07:21:49.000Z</published>
     <updated>2018-07-30T02:08:18.021Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="angular" scheme="http://windfanta.github.io/categories/study/angular/"/>
+      <category term="angular" scheme="http://windfanta.github.io/blog/categories/study/angular/"/>
     
     
   </entry>
   
   <entry>
     <title>Angular essentials - Angular의 파일 구조와 처리 흐름</title>
-    <link href="http://windfanta.github.io/2018/07/25/study-angular-essential-6/"/>
-    <id>http://windfanta.github.io/2018/07/25/study-angular-essential-6/</id>
+    <link href="http://windfanta.github.io/blog/2018/07/25/study-angular-essential-6/"/>
+    <id>http://windfanta.github.io/blog/2018/07/25/study-angular-essential-6/</id>
     <published>2018-07-25T07:21:49.000Z</published>
     <updated>2018-07-30T02:08:16.310Z</updated>
     
@@ -59,17 +59,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="angular" scheme="http://windfanta.github.io/categories/study/angular/"/>
+      <category term="angular" scheme="http://windfanta.github.io/blog/categories/study/angular/"/>
     
     
   </entry>
   
   <entry>
     <title>Angular essentials - typeScript</title>
-    <link href="http://windfanta.github.io/2018/07/23/study-angular-essential-4/"/>
-    <id>http://windfanta.github.io/2018/07/23/study-angular-essential-4/</id>
+    <link href="http://windfanta.github.io/blog/2018/07/23/study-angular-essential-4/"/>
+    <id>http://windfanta.github.io/blog/2018/07/23/study-angular-essential-4/</id>
     <published>2018-07-23T07:21:49.000Z</published>
     <updated>2018-07-30T02:08:14.222Z</updated>
     
@@ -84,17 +84,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="angular" scheme="http://windfanta.github.io/categories/study/angular/"/>
+      <category term="angular" scheme="http://windfanta.github.io/blog/categories/study/angular/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 2 CH9 애니메이션 효과 다루기</title>
-    <link href="http://windfanta.github.io/2018/04/03/study-jquery-12/"/>
-    <id>http://windfanta.github.io/2018/04/03/study-jquery-12/</id>
+    <link href="http://windfanta.github.io/blog/2018/04/03/study-jquery-12/"/>
+    <id>http://windfanta.github.io/blog/2018/04/03/study-jquery-12/</id>
     <published>2018-04-03T01:41:16.000Z</published>
     <updated>2018-07-30T01:01:30.075Z</updated>
     
@@ -109,17 +109,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>HTML, CSS 요약(사내공유용)</title>
-    <link href="http://windfanta.github.io/2018/03/30/study-css/"/>
-    <id>http://windfanta.github.io/2018/03/30/study-css/</id>
+    <link href="http://windfanta.github.io/blog/2018/03/30/study-css/"/>
+    <id>http://windfanta.github.io/blog/2018/03/30/study-css/</id>
     <published>2018-03-30T07:21:49.000Z</published>
     <updated>2018-07-30T01:01:30.066Z</updated>
     
@@ -135,17 +135,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="CSS" scheme="http://windfanta.github.io/categories/study/CSS/"/>
+      <category term="CSS" scheme="http://windfanta.github.io/blog/categories/study/CSS/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 2 CH7 이벤트 다루기</title>
-    <link href="http://windfanta.github.io/2018/03/22/study-jquery-11/"/>
-    <id>http://windfanta.github.io/2018/03/22/study-jquery-11/</id>
+    <link href="http://windfanta.github.io/blog/2018/03/22/study-jquery-11/"/>
+    <id>http://windfanta.github.io/blog/2018/03/22/study-jquery-11/</id>
     <published>2018-03-22T01:42:45.000Z</published>
     <updated>2018-07-30T01:01:30.075Z</updated>
     
@@ -160,17 +160,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 2 CH5~6 스타일, 속성 다루기</title>
-    <link href="http://windfanta.github.io/2018/03/19/study-jquery-10/"/>
-    <id>http://windfanta.github.io/2018/03/19/study-jquery-10/</id>
+    <link href="http://windfanta.github.io/blog/2018/03/19/study-jquery-10/"/>
+    <id>http://windfanta.github.io/blog/2018/03/19/study-jquery-10/</id>
     <published>2018-03-19T07:27:11.000Z</published>
     <updated>2018-07-30T01:01:30.074Z</updated>
     
@@ -185,17 +185,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 2 CH02 jQuery 소개</title>
-    <link href="http://windfanta.github.io/2018/03/05/study-jquery-9/"/>
-    <id>http://windfanta.github.io/2018/03/05/study-jquery-9/</id>
+    <link href="http://windfanta.github.io/blog/2018/03/05/study-jquery-9/"/>
+    <id>http://windfanta.github.io/blog/2018/03/05/study-jquery-9/</id>
     <published>2018-03-05T02:36:40.000Z</published>
     <updated>2018-07-30T01:01:30.079Z</updated>
     
@@ -210,17 +210,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>(vue.js) - 08 사용자 정의 이벤트</title>
-    <link href="http://windfanta.github.io/2018/02/25/study-vue-8/"/>
-    <id>http://windfanta.github.io/2018/02/25/study-vue-8/</id>
+    <link href="http://windfanta.github.io/blog/2018/02/25/study-vue-8/"/>
+    <id>http://windfanta.github.io/blog/2018/02/25/study-vue-8/</id>
     <published>2018-02-25T05:56:59.000Z</published>
     <updated>2018-07-30T01:01:30.084Z</updated>
     
@@ -236,17 +236,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="vue.js" scheme="http://windfanta.github.io/categories/study/vue-js/"/>
+      <category term="vue.js" scheme="http://windfanta.github.io/blog/categories/study/vue-js/"/>
     
     
   </entry>
   
   <entry>
     <title>scss</title>
-    <link href="http://windfanta.github.io/2018/02/20/study-sass-1/"/>
-    <id>http://windfanta.github.io/2018/02/20/study-sass-1/</id>
+    <link href="http://windfanta.github.io/blog/2018/02/20/study-sass-1/"/>
+    <id>http://windfanta.github.io/blog/2018/02/20/study-sass-1/</id>
     <published>2018-02-20T01:33:18.000Z</published>
     <updated>2018-07-30T01:01:30.081Z</updated>
     
@@ -261,17 +261,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="scss" scheme="http://windfanta.github.io/categories/study/scss/"/>
+      <category term="scss" scheme="http://windfanta.github.io/blog/categories/study/scss/"/>
     
     
   </entry>
   
   <entry>
     <title>(vue.js) - 07 컴포넌트</title>
-    <link href="http://windfanta.github.io/2018/02/14/study-vue-7/"/>
-    <id>http://windfanta.github.io/2018/02/14/study-vue-7/</id>
+    <link href="http://windfanta.github.io/blog/2018/02/14/study-vue-7/"/>
+    <id>http://windfanta.github.io/blog/2018/02/14/study-vue-7/</id>
     <published>2018-02-14T07:16:41.000Z</published>
     <updated>2018-07-30T01:01:30.084Z</updated>
     
@@ -287,17 +287,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="vue.js" scheme="http://windfanta.github.io/categories/study/vue-js/"/>
+      <category term="vue.js" scheme="http://windfanta.github.io/blog/categories/study/vue-js/"/>
     
     
   </entry>
   
   <entry>
     <title>(vue.js) - 06 필터</title>
-    <link href="http://windfanta.github.io/2018/02/13/study-vue-6/"/>
-    <id>http://windfanta.github.io/2018/02/13/study-vue-6/</id>
+    <link href="http://windfanta.github.io/blog/2018/02/13/study-vue-6/"/>
+    <id>http://windfanta.github.io/blog/2018/02/13/study-vue-6/</id>
     <published>2018-02-13T11:16:52.000Z</published>
     <updated>2018-07-30T01:01:30.083Z</updated>
     
@@ -313,17 +313,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="vue.js" scheme="http://windfanta.github.io/categories/study/vue-js/"/>
+      <category term="vue.js" scheme="http://windfanta.github.io/blog/categories/study/vue-js/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - PART3 - CH04 ~ 05 Date, Array 클래스</title>
-    <link href="http://windfanta.github.io/2018/02/12/study-jquery-8/"/>
-    <id>http://windfanta.github.io/2018/02/12/study-jquery-8/</id>
+    <link href="http://windfanta.github.io/blog/2018/02/12/study-jquery-8/"/>
+    <id>http://windfanta.github.io/blog/2018/02/12/study-jquery-8/</id>
     <published>2018-02-12T10:19:03.000Z</published>
     <updated>2018-07-30T01:01:30.078Z</updated>
     
@@ -338,17 +338,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - PART2 - CH03 함수 중급</title>
-    <link href="http://windfanta.github.io/2018/01/31/study-jquery-7/"/>
-    <id>http://windfanta.github.io/2018/01/31/study-jquery-7/</id>
+    <link href="http://windfanta.github.io/blog/2018/01/31/study-jquery-7/"/>
+    <id>http://windfanta.github.io/blog/2018/01/31/study-jquery-7/</id>
     <published>2018-01-31T10:20:27.000Z</published>
     <updated>2018-07-30T01:01:30.077Z</updated>
     
@@ -363,17 +363,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>처음 만나는 파이썬 - Chapter2</title>
-    <link href="http://windfanta.github.io/2018/01/26/study-python-1/"/>
-    <id>http://windfanta.github.io/2018/01/26/study-python-1/</id>
+    <link href="http://windfanta.github.io/blog/2018/01/26/study-python-1/"/>
+    <id>http://windfanta.github.io/blog/2018/01/26/study-python-1/</id>
     <published>2018-01-26T00:50:55.000Z</published>
     <updated>2018-07-30T01:01:30.080Z</updated>
     
@@ -388,17 +388,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="python" scheme="http://windfanta.github.io/categories/study/python/"/>
+      <category term="python" scheme="http://windfanta.github.io/blog/categories/study/python/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - PART2 - CH01 함수 기초</title>
-    <link href="http://windfanta.github.io/2018/01/24/study-jquery-6/"/>
-    <id>http://windfanta.github.io/2018/01/24/study-jquery-6/</id>
+    <link href="http://windfanta.github.io/blog/2018/01/24/study-jquery-6/"/>
+    <id>http://windfanta.github.io/blog/2018/01/24/study-jquery-6/</id>
     <published>2018-01-24T06:06:16.000Z</published>
     <updated>2018-07-30T01:01:30.077Z</updated>
     
@@ -413,17 +413,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - AD2 - 초보자를 위한 jQuery</title>
-    <link href="http://windfanta.github.io/2018/01/11/study-jquery-4/"/>
-    <id>http://windfanta.github.io/2018/01/11/study-jquery-4/</id>
+    <link href="http://windfanta.github.io/blog/2018/01/11/study-jquery-4/"/>
+    <id>http://windfanta.github.io/blog/2018/01/11/study-jquery-4/</id>
     <published>2018-01-11T00:50:54.000Z</published>
     <updated>2018-07-30T01:01:30.076Z</updated>
     
@@ -438,17 +438,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - CH2 - 기본 연산자</title>
-    <link href="http://windfanta.github.io/2018/01/07/study-jquery-2/"/>
-    <id>http://windfanta.github.io/2018/01/07/study-jquery-2/</id>
+    <link href="http://windfanta.github.io/blog/2018/01/07/study-jquery-2/"/>
+    <id>http://windfanta.github.io/blog/2018/01/07/study-jquery-2/</id>
     <published>2018-01-07T07:29:53.000Z</published>
     <updated>2018-07-30T01:01:30.075Z</updated>
     
@@ -463,42 +463,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>자바스크립트 jquery 완전정복 스터디 1 - CH2 - 조건문 if</title>
-    <link href="http://windfanta.github.io/2018/01/03/study-jquery-5/"/>
-    <id>http://windfanta.github.io/2018/01/03/study-jquery-5/</id>
-    <published>2018-01-03T06:46:11.000Z</published>
-    <updated>2018-07-30T01:01:30.076Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="자바스크립트-jQuery-완전정복-스터디-1"><a href="#자바스크립트-jQuery-완전정복-스터디-1" class="headerlink" title="[ 자바스크립트+jQuery 완전정복 스터디 1 ]"></a>[ 자바스크립트+jQuery 완전정복 스터디 1 ]</h1><p>(<a href="http://book.naver.com/bookdb/book_detail.nhn?bid=9650891" target="_blank" rel="noopener">http://book.naver.com/bookdb/book_detail.nhn?bid=9650891</a>)</p><p><br></p><h1 id="CHAPTER-04-조건문-if"><a href="#CHAPTER-04-조건문-if" class="headerlink" title="CHAPTER 04 조건문 if"></a>CHAPTER 04 조건문 if</h1><hr><p><br></p><h2 id="lesson01-조건문-소개"><a href="#lesson01-조건문-소개" class="headerlink" title="lesson01 조건문 소개"></a>lesson01 조건문 소개</h2><hr><h3 id="01-조건문이란"><a href="#01-조건문이란" class="headerlink" title="01_ 조건문이란?"></a>01_ 조건문이란?</h3><p>특정 조건이 맞는 경우에만 특정 구문을 실행하고자 할 떄 사용하는 자바스크립트의 제어문 입니다.</p><p><br></p><h3 id="02-조건문은-이럴-때-사용해요"><a href="#02-조건문은-이럴-때-사용해요" class="headerlink" title="02_ 조건문은 이럴 때 사용해요"></a>02_ 조건문은 이럴 때 사용해요</h3><blockquote><p>-사이트에 로그인 시 조건문을 사용하여 입력한 아이디와 패스워드가 서버에 저장된 정보와 같은지 비교 후 같다면 사이트의 접속을 허락하고 아니라면 오류 메시지를 띄우는 경우<br>-여러분이 뽑은 번호가 1번이면 냉장고 2번이면 TV, 3번이면 세ㅏㄱ기를 주는 경품 추첨기를 만들 때도 조건문을 사용합니다.<br>-게시물 삭제 시 게시물의 삭제 여부를 묻는 메시지 박스에서 사용 등</p></blockquote><p><br></p><h3 id="03-조건문의-종류"><a href="#03-조건문의-종류" class="headerlink" title="03_ 조건문의 종류"></a>03_ 조건문의 종류</h3><blockquote><p>if - 가장 일반적으로 사용하는 조건문<br>switch - if로 만들어진 다중 조건처리를 비교적 간결하게 처리할 수 있는 조건문</p></blockquote><p><br></p><h2 id="lesson02-if문-소개"><a href="#lesson02-if문-소개" class="headerlink" title="lesson02 if문 소개"></a>lesson02 if문 소개</h2><hr><p><br></p><h3 id="01-if문이란"><a href="#01-if문이란" class="headerlink" title="01_if문이란?"></a>01_if문이란?</h3><p>if문은 특정 조건이 맞는 경우에만 특정 구문을 실행하길 원하는 경우에 사용하는 조건문 중 하나 입니다.</p><p>내가 로또에 당첨된다면<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mylotto = <span class="string">'나의 로또번호'</span>;</span><br><span class="line"><span class="keyword">var</span> weeklotto = <span class="string">'이번 주 로또 당첨번호'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (mylotto == weeklotto) &#123;</span><br><span class="line">true<span class="comment">// 내 로또와 금주 당첨번호가 같은 경우</span></span><br><span class="line">  난 집을 사겠다();</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">true<span class="comment">// 내 로또와 금주 당첨번호가 같지 않은 경우</span></span><br><span class="line">  평소처럼 그냥 산다();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>위와 같은 식으로 특정 조건이 맞을 때만 원하는 구문을 실행하고 싶을 때 조건문 if를 사용합니다.<br>프로그래밍언어는 일상 생활과 많이 닮아 있습니다. 우리가 의사소통을 위해 글자를 사용하듯 컴퓨터와 의사소통을 위해서 프로그래밍 언어를 사용하는 것이죠 즉 프로그래밍 언어란? 우리가 생각하고 있는 내용을 컴퓨터가 알아들을 수 있게 사용하는 또 다른 언어 입니다.</p><p><br></p><h3 id="02-if문-문법"><a href="#02-if문-문법" class="headerlink" title="02_if문 문법"></a>02_if문 문법</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (조건식<span class="number">1</span>) &#123;</span><br><span class="line">true<span class="comment">// 참(true)일 경우 실행될 코드</span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (조건식<span class="number">2</span>) &#123;</span><br><span class="line">true<span class="comment">// 조건식1이 거짓(false)이고 조건식2가 참(true)인 경우 실행될 코드</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">true<span class="comment">// 조건식 1, 2가 모두 거짓(false)인 경우 실행 될 코드</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><br></p><h2 id="lesson03-논리-비교-연산자"><a href="#lesson03-논리-비교-연산자" class="headerlink" title="lesson03 논리 비교 연산자"></a>lesson03 논리 비교 연산자</h2><hr><h3 id="01-논리-비교-연산자-용도"><a href="#01-논리-비교-연산자-용도" class="headerlink" title="01_논리 비교 연산자 용도"></a>01_논리 비교 연산자 용도</h3><p><strong>비교 연산자</strong><br>두 값을 비교할 때 사용하는 연산자<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">2</span> &gt; <span class="number">1</span>) &#123;</span><br><span class="line">true<span class="comment">// 크기 비교 (2는 1보다 큰가?)</span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">10</span> == <span class="number">9</span>) &#123;</span><br><span class="line">true<span class="comment">// 같은지 비교 (10과 9는 같은가?)</span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">10</span> != <span class="number">9</span>) &#123;</span><br><span class="line">true<span class="comment">// 같지 않은지를 비교 (10과 9은 같지 않은가?) </span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">10</span> &gt;= <span class="number">9</span>) &#123;</span><br><span class="line">true<span class="comment">// 크기와 같은 지를 비교 (10이 9보다 크거나 같은가? )</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><strong>논리 연산자</strong><br>여러 개의 비교 연산자를 묶을 때 사용하는 연산자<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &amp;&amp;(and) 연산자</span></span><br><span class="line"><span class="keyword">if</span> ( (<span class="number">2</span> &gt; <span class="number">1</span>) &amp;&amp; (<span class="number">10</span> == <span class="number">5</span>) ) &#123;</span><br><span class="line">true<span class="comment">// 첫번 째 비교(2는 1보다 큰가)와 두번 쨰 비교(10은 5와 같은가)가 모두 참인지를 판단</span></span><br><span class="line">true<span class="comment">// &amp;&amp;는 비교값A와 비교값B가 모두 참인지 여부를 판단 </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ||(or) 연산자 </span></span><br><span class="line"><span class="keyword">if</span> ( (<span class="number">2</span> &gt; <span class="number">1</span>) || (<span class="number">10</span> == <span class="number">5</span>) ) &#123;</span><br><span class="line">true<span class="comment">// 첫번 째 비교(2는 1보다 큰가)와 두번 쨰 비교(10은 5와 같은가)중에 하나라도 참인지를 판단</span></span><br><span class="line">true<span class="comment">// ||는 비교값A와 비교값B중에 하나라도 참인지 여부를 판단 </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><br></p><h3 id="03-비교-연산자"><a href="#03-비교-연산자" class="headerlink" title="03_비교 연산자"></a>03_비교 연산자</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a가 b보다 큰 값인가?</span></span><br><span class="line"><span class="keyword">if</span> (a &gt; b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// a가 b보다 작은 값인가?</span></span><br><span class="line"><span class="keyword">if</span> (a &lt; b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// a와 b의 값이 같은 가?</span></span><br><span class="line"><span class="keyword">if</span> (a == b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// a와 b의 값이 다른 가?</span></span><br><span class="line"><span class="keyword">if</span> (a != b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// a가 b보다 크거나 같은 가? </span></span><br><span class="line"><span class="keyword">if</span> (a &gt;= b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// a가 b작거나 크거나 같은 가? </span></span><br><span class="line"><span class="keyword">if</span> (a &lt;= b) &#123; &#125;</span><br></pre></td></tr></table></figure><p><br></p><h3 id="04-논리-연산자"><a href="#04-논리-연산자" class="headerlink" title="04_논리 연산자"></a>04_논리 연산자</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  &amp;&amp;(AND) - a와 b가 같고 c와 d도 같은가?  </span></span><br><span class="line"><span class="keyword">if</span> (a == b &amp;&amp; c == b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ||(OR) - a와 b가 같거나 c와 d가 같은가? </span></span><br><span class="line"><span class="keyword">if</span> (a == b || c == b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 더 잘보이게 하기 위해 괄호로 영역을 구분해줘도 좋습니다.</span></span><br><span class="line"><span class="keyword">if</span> ( (a == b) &amp;&amp; (c == b) ) &#123; &#125;</span><br><span class="line"><span class="keyword">if</span> ( (a == b) || (c == b) ) &#123; &#125;</span><br></pre></td></tr></table></figure><p><br></p><h2 id="lesson04-if에-논리-비교-연산자-연동하기"><a href="#lesson04-if에-논리-비교-연산자-연동하기" class="headerlink" title="lesson04 if에 논리 비교 연산자 연동하기"></a>lesson04 if에 논리 비교 연산자 연동하기</h2><p>비교연산자의 활용 예<br><iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/3q34mx1w/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p><p>논리 연산자의 활용 예<br><iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/spxw3v1c/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p><p><br></p><h2 id="lesson05-07-if"><a href="#lesson05-07-if" class="headerlink" title="lesson05 ~ 07 if"></a>lesson05 ~ 07 if</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 1단계 if */</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">'안녕'</span> == <span class="string">'안녕'</span>) &#123;</span><br><span class="line">truealert(<span class="string">'반가워~'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 2, 3단계가 존재하지 않는다면 이렇게도 작성가능(권장하진 않습니다~)</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">'안녕'</span> == <span class="string">'안녕'</span>) alert(<span class="string">'반가워!'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 세미콜론은 문장의 종료를 뜻하므로 한줄로 작성 시 작성에 주의하세요~</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">'안녕'</span> == <span class="string">'안녕'</span>); alert(<span class="string">'반가워!'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 2단계 if(if ~ else) */</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">'hello'</span> == <span class="string">'hello'</span>) &#123;</span><br><span class="line">truealert(<span class="string">'welcome~'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">truealert(<span class="string">'반가워'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// if ~ else문은 첫번 째 조건문을 실행 후 참이라면 실행, 거짓이라면 else를 실행 합니다.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 3단계 if(if ~ else if ~ else) */</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">'hello'</span> == <span class="string">'hello'</span>) &#123;</span><br><span class="line">truealert(<span class="string">'welcome'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">'안녕'</span> == <span class="string">'안녕'</span>) &#123;</span><br><span class="line">truealert(<span class="string">'방가'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">'안녕하세요'</span> == <span class="string">'안녕하세요'</span>) &#123;</span><br><span class="line">truealert(<span class="string">'반갑습니다~'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">truealert(<span class="string">'누구세요?'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2단계와 마찬가지로 순차적으로 값을 비교하며 참인 경우 해당 구문을 실행합니다.</span></span><br><span class="line"><span class="comment">// 참으로 판단되는 경우 아래 남아있는 조건은 실행되지 않습니다.</span></span><br></pre></td></tr></table></figure><p>3단계의 예<br><iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/Lo3qrawu/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p><p><br></p><h2 id="lesson08-조건부-연산자-삼항연산자"><a href="#lesson08-조건부-연산자-삼항연산자" class="headerlink" title="lesson08 조건부 연산자(삼항연산자)"></a>lesson08 조건부 연산자(삼항연산자)</h2><p>if else의 형태의 코드를 간결하게 표현할 수 있게 해주는 문법입니다.</p><blockquote><p>(조건식) ? 참일 때 실행될 코드 : 거짓일 때 실행 될 코드;</p></blockquote><p>사용 예<br><iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/271ej315/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;자바스크립트-jQuery-완전정복-스터디-1&quot;&gt;&lt;a href=&quot;#자바스크립트-jQuery-완전정복-스터디-1&quot; class=&quot;headerlink&quot; title=&quot;[ 자바스크립트+jQuery 완전정복 스터디 1 ]&quot;&gt;&lt;/a&gt;[ 자바스크립트+j
-      
-    
-    </summary>
-    
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
-    
-      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - AD1 - 초보자를 위한 함수와 클래스</title>
-    <link href="http://windfanta.github.io/2018/01/03/study-jquery-3/"/>
-    <id>http://windfanta.github.io/2018/01/03/study-jquery-3/</id>
+    <link href="http://windfanta.github.io/blog/2018/01/03/study-jquery-3/"/>
+    <id>http://windfanta.github.io/blog/2018/01/03/study-jquery-3/</id>
     <published>2018-01-03T06:46:11.000Z</published>
     <updated>2018-07-30T01:01:30.075Z</updated>
     
@@ -513,9 +488,34 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>자바스크립트 jquery 완전정복 스터디 1 - CH2 - 조건문 if</title>
+    <link href="http://windfanta.github.io/blog/2018/01/03/study-jquery-5/"/>
+    <id>http://windfanta.github.io/blog/2018/01/03/study-jquery-5/</id>
+    <published>2018-01-03T06:46:11.000Z</published>
+    <updated>2018-07-30T01:01:30.076Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="자바스크립트-jQuery-완전정복-스터디-1"><a href="#자바스크립트-jQuery-완전정복-스터디-1" class="headerlink" title="[ 자바스크립트+jQuery 완전정복 스터디 1 ]"></a>[ 자바스크립트+jQuery 완전정복 스터디 1 ]</h1><p>(<a href="http://book.naver.com/bookdb/book_detail.nhn?bid=9650891" target="_blank" rel="noopener">http://book.naver.com/bookdb/book_detail.nhn?bid=9650891</a>)</p><p><br></p><h1 id="CHAPTER-04-조건문-if"><a href="#CHAPTER-04-조건문-if" class="headerlink" title="CHAPTER 04 조건문 if"></a>CHAPTER 04 조건문 if</h1><hr><p><br></p><h2 id="lesson01-조건문-소개"><a href="#lesson01-조건문-소개" class="headerlink" title="lesson01 조건문 소개"></a>lesson01 조건문 소개</h2><hr><h3 id="01-조건문이란"><a href="#01-조건문이란" class="headerlink" title="01_ 조건문이란?"></a>01_ 조건문이란?</h3><p>특정 조건이 맞는 경우에만 특정 구문을 실행하고자 할 떄 사용하는 자바스크립트의 제어문 입니다.</p><p><br></p><h3 id="02-조건문은-이럴-때-사용해요"><a href="#02-조건문은-이럴-때-사용해요" class="headerlink" title="02_ 조건문은 이럴 때 사용해요"></a>02_ 조건문은 이럴 때 사용해요</h3><blockquote><p>-사이트에 로그인 시 조건문을 사용하여 입력한 아이디와 패스워드가 서버에 저장된 정보와 같은지 비교 후 같다면 사이트의 접속을 허락하고 아니라면 오류 메시지를 띄우는 경우<br>-여러분이 뽑은 번호가 1번이면 냉장고 2번이면 TV, 3번이면 세ㅏㄱ기를 주는 경품 추첨기를 만들 때도 조건문을 사용합니다.<br>-게시물 삭제 시 게시물의 삭제 여부를 묻는 메시지 박스에서 사용 등</p></blockquote><p><br></p><h3 id="03-조건문의-종류"><a href="#03-조건문의-종류" class="headerlink" title="03_ 조건문의 종류"></a>03_ 조건문의 종류</h3><blockquote><p>if - 가장 일반적으로 사용하는 조건문<br>switch - if로 만들어진 다중 조건처리를 비교적 간결하게 처리할 수 있는 조건문</p></blockquote><p><br></p><h2 id="lesson02-if문-소개"><a href="#lesson02-if문-소개" class="headerlink" title="lesson02 if문 소개"></a>lesson02 if문 소개</h2><hr><p><br></p><h3 id="01-if문이란"><a href="#01-if문이란" class="headerlink" title="01_if문이란?"></a>01_if문이란?</h3><p>if문은 특정 조건이 맞는 경우에만 특정 구문을 실행하길 원하는 경우에 사용하는 조건문 중 하나 입니다.</p><p>내가 로또에 당첨된다면<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mylotto = <span class="string">'나의 로또번호'</span>;</span><br><span class="line"><span class="keyword">var</span> weeklotto = <span class="string">'이번 주 로또 당첨번호'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (mylotto == weeklotto) &#123;</span><br><span class="line">true<span class="comment">// 내 로또와 금주 당첨번호가 같은 경우</span></span><br><span class="line">  난 집을 사겠다();</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">true<span class="comment">// 내 로또와 금주 당첨번호가 같지 않은 경우</span></span><br><span class="line">  평소처럼 그냥 산다();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>위와 같은 식으로 특정 조건이 맞을 때만 원하는 구문을 실행하고 싶을 때 조건문 if를 사용합니다.<br>프로그래밍언어는 일상 생활과 많이 닮아 있습니다. 우리가 의사소통을 위해 글자를 사용하듯 컴퓨터와 의사소통을 위해서 프로그래밍 언어를 사용하는 것이죠 즉 프로그래밍 언어란? 우리가 생각하고 있는 내용을 컴퓨터가 알아들을 수 있게 사용하는 또 다른 언어 입니다.</p><p><br></p><h3 id="02-if문-문법"><a href="#02-if문-문법" class="headerlink" title="02_if문 문법"></a>02_if문 문법</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (조건식<span class="number">1</span>) &#123;</span><br><span class="line">true<span class="comment">// 참(true)일 경우 실행될 코드</span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (조건식<span class="number">2</span>) &#123;</span><br><span class="line">true<span class="comment">// 조건식1이 거짓(false)이고 조건식2가 참(true)인 경우 실행될 코드</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">true<span class="comment">// 조건식 1, 2가 모두 거짓(false)인 경우 실행 될 코드</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><br></p><h2 id="lesson03-논리-비교-연산자"><a href="#lesson03-논리-비교-연산자" class="headerlink" title="lesson03 논리 비교 연산자"></a>lesson03 논리 비교 연산자</h2><hr><h3 id="01-논리-비교-연산자-용도"><a href="#01-논리-비교-연산자-용도" class="headerlink" title="01_논리 비교 연산자 용도"></a>01_논리 비교 연산자 용도</h3><p><strong>비교 연산자</strong><br>두 값을 비교할 때 사용하는 연산자<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">2</span> &gt; <span class="number">1</span>) &#123;</span><br><span class="line">true<span class="comment">// 크기 비교 (2는 1보다 큰가?)</span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">10</span> == <span class="number">9</span>) &#123;</span><br><span class="line">true<span class="comment">// 같은지 비교 (10과 9는 같은가?)</span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">10</span> != <span class="number">9</span>) &#123;</span><br><span class="line">true<span class="comment">// 같지 않은지를 비교 (10과 9은 같지 않은가?) </span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (<span class="number">10</span> &gt;= <span class="number">9</span>) &#123;</span><br><span class="line">true<span class="comment">// 크기와 같은 지를 비교 (10이 9보다 크거나 같은가? )</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><strong>논리 연산자</strong><br>여러 개의 비교 연산자를 묶을 때 사용하는 연산자<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &amp;&amp;(and) 연산자</span></span><br><span class="line"><span class="keyword">if</span> ( (<span class="number">2</span> &gt; <span class="number">1</span>) &amp;&amp; (<span class="number">10</span> == <span class="number">5</span>) ) &#123;</span><br><span class="line">true<span class="comment">// 첫번 째 비교(2는 1보다 큰가)와 두번 쨰 비교(10은 5와 같은가)가 모두 참인지를 판단</span></span><br><span class="line">true<span class="comment">// &amp;&amp;는 비교값A와 비교값B가 모두 참인지 여부를 판단 </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ||(or) 연산자 </span></span><br><span class="line"><span class="keyword">if</span> ( (<span class="number">2</span> &gt; <span class="number">1</span>) || (<span class="number">10</span> == <span class="number">5</span>) ) &#123;</span><br><span class="line">true<span class="comment">// 첫번 째 비교(2는 1보다 큰가)와 두번 쨰 비교(10은 5와 같은가)중에 하나라도 참인지를 판단</span></span><br><span class="line">true<span class="comment">// ||는 비교값A와 비교값B중에 하나라도 참인지 여부를 판단 </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><br></p><h3 id="03-비교-연산자"><a href="#03-비교-연산자" class="headerlink" title="03_비교 연산자"></a>03_비교 연산자</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a가 b보다 큰 값인가?</span></span><br><span class="line"><span class="keyword">if</span> (a &gt; b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// a가 b보다 작은 값인가?</span></span><br><span class="line"><span class="keyword">if</span> (a &lt; b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// a와 b의 값이 같은 가?</span></span><br><span class="line"><span class="keyword">if</span> (a == b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// a와 b의 값이 다른 가?</span></span><br><span class="line"><span class="keyword">if</span> (a != b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// a가 b보다 크거나 같은 가? </span></span><br><span class="line"><span class="keyword">if</span> (a &gt;= b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// a가 b작거나 크거나 같은 가? </span></span><br><span class="line"><span class="keyword">if</span> (a &lt;= b) &#123; &#125;</span><br></pre></td></tr></table></figure><p><br></p><h3 id="04-논리-연산자"><a href="#04-논리-연산자" class="headerlink" title="04_논리 연산자"></a>04_논리 연산자</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  &amp;&amp;(AND) - a와 b가 같고 c와 d도 같은가?  </span></span><br><span class="line"><span class="keyword">if</span> (a == b &amp;&amp; c == b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ||(OR) - a와 b가 같거나 c와 d가 같은가? </span></span><br><span class="line"><span class="keyword">if</span> (a == b || c == b) &#123; &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 더 잘보이게 하기 위해 괄호로 영역을 구분해줘도 좋습니다.</span></span><br><span class="line"><span class="keyword">if</span> ( (a == b) &amp;&amp; (c == b) ) &#123; &#125;</span><br><span class="line"><span class="keyword">if</span> ( (a == b) || (c == b) ) &#123; &#125;</span><br></pre></td></tr></table></figure><p><br></p><h2 id="lesson04-if에-논리-비교-연산자-연동하기"><a href="#lesson04-if에-논리-비교-연산자-연동하기" class="headerlink" title="lesson04 if에 논리 비교 연산자 연동하기"></a>lesson04 if에 논리 비교 연산자 연동하기</h2><p>비교연산자의 활용 예<br><iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/3q34mx1w/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p><p>논리 연산자의 활용 예<br><iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/spxw3v1c/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p><p><br></p><h2 id="lesson05-07-if"><a href="#lesson05-07-if" class="headerlink" title="lesson05 ~ 07 if"></a>lesson05 ~ 07 if</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 1단계 if */</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">'안녕'</span> == <span class="string">'안녕'</span>) &#123;</span><br><span class="line">truealert(<span class="string">'반가워~'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 2, 3단계가 존재하지 않는다면 이렇게도 작성가능(권장하진 않습니다~)</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">'안녕'</span> == <span class="string">'안녕'</span>) alert(<span class="string">'반가워!'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 세미콜론은 문장의 종료를 뜻하므로 한줄로 작성 시 작성에 주의하세요~</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">'안녕'</span> == <span class="string">'안녕'</span>); alert(<span class="string">'반가워!'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 2단계 if(if ~ else) */</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">'hello'</span> == <span class="string">'hello'</span>) &#123;</span><br><span class="line">truealert(<span class="string">'welcome~'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">truealert(<span class="string">'반가워'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// if ~ else문은 첫번 째 조건문을 실행 후 참이라면 실행, 거짓이라면 else를 실행 합니다.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 3단계 if(if ~ else if ~ else) */</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">'hello'</span> == <span class="string">'hello'</span>) &#123;</span><br><span class="line">truealert(<span class="string">'welcome'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">'안녕'</span> == <span class="string">'안녕'</span>) &#123;</span><br><span class="line">truealert(<span class="string">'방가'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">'안녕하세요'</span> == <span class="string">'안녕하세요'</span>) &#123;</span><br><span class="line">truealert(<span class="string">'반갑습니다~'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">truealert(<span class="string">'누구세요?'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2단계와 마찬가지로 순차적으로 값을 비교하며 참인 경우 해당 구문을 실행합니다.</span></span><br><span class="line"><span class="comment">// 참으로 판단되는 경우 아래 남아있는 조건은 실행되지 않습니다.</span></span><br></pre></td></tr></table></figure><p>3단계의 예<br><iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/Lo3qrawu/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p><p><br></p><h2 id="lesson08-조건부-연산자-삼항연산자"><a href="#lesson08-조건부-연산자-삼항연산자" class="headerlink" title="lesson08 조건부 연산자(삼항연산자)"></a>lesson08 조건부 연산자(삼항연산자)</h2><p>if else의 형태의 코드를 간결하게 표현할 수 있게 해주는 문법입니다.</p><blockquote><p>(조건식) ? 참일 때 실행될 코드 : 거짓일 때 실행 될 코드;</p></blockquote><p>사용 예<br><iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/271ej315/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;자바스크립트-jQuery-완전정복-스터디-1&quot;&gt;&lt;a href=&quot;#자바스크립트-jQuery-완전정복-스터디-1&quot; class=&quot;headerlink&quot; title=&quot;[ 자바스크립트+jQuery 완전정복 스터디 1 ]&quot;&gt;&lt;/a&gt;[ 자바스크립트+j
+      
+    
+    </summary>
+    
+      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+    
+      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
     
     
   </entry>
