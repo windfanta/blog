@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://windfanta.github.io/blog/"/>
+  <link href="http://windfanta.github.io/"/>
   <updated>2018-07-30T02:08:18.021Z</updated>
-  <id>http://windfanta.github.io/blog/</id>
+  <id>http://windfanta.github.io/</id>
   
   <author>
     <name>SUNGMIN SHIN</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Angular essentials - 컴포넌트</title>
-    <link href="http://windfanta.github.io/blog/2018/07/27/study-angular-essential-7/"/>
-    <id>http://windfanta.github.io/blog/2018/07/27/study-angular-essential-7/</id>
+    <link href="http://windfanta.github.io/2018/07/27/study-angular-essential-7/"/>
+    <id>http://windfanta.github.io/2018/07/27/study-angular-essential-7/</id>
     <published>2018-07-27T07:21:49.000Z</published>
     <updated>2018-07-30T02:08:18.021Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="angular" scheme="http://windfanta.github.io/blog/categories/study/angular/"/>
+      <category term="angular" scheme="http://windfanta.github.io/categories/study/angular/"/>
     
     
   </entry>
   
   <entry>
     <title>Angular essentials - Angular의 파일 구조와 처리 흐름</title>
-    <link href="http://windfanta.github.io/blog/2018/07/25/study-angular-essential-6/"/>
-    <id>http://windfanta.github.io/blog/2018/07/25/study-angular-essential-6/</id>
+    <link href="http://windfanta.github.io/2018/07/25/study-angular-essential-6/"/>
+    <id>http://windfanta.github.io/2018/07/25/study-angular-essential-6/</id>
     <published>2018-07-25T07:21:49.000Z</published>
     <updated>2018-07-30T02:08:16.310Z</updated>
     
@@ -59,17 +59,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="angular" scheme="http://windfanta.github.io/blog/categories/study/angular/"/>
+      <category term="angular" scheme="http://windfanta.github.io/categories/study/angular/"/>
     
     
   </entry>
   
   <entry>
     <title>Angular essentials - typeScript</title>
-    <link href="http://windfanta.github.io/blog/2018/07/23/study-angular-essential-4/"/>
-    <id>http://windfanta.github.io/blog/2018/07/23/study-angular-essential-4/</id>
+    <link href="http://windfanta.github.io/2018/07/23/study-angular-essential-4/"/>
+    <id>http://windfanta.github.io/2018/07/23/study-angular-essential-4/</id>
     <published>2018-07-23T07:21:49.000Z</published>
     <updated>2018-07-30T02:08:14.222Z</updated>
     
@@ -84,17 +84,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="angular" scheme="http://windfanta.github.io/blog/categories/study/angular/"/>
+      <category term="angular" scheme="http://windfanta.github.io/categories/study/angular/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 2 CH9 애니메이션 효과 다루기</title>
-    <link href="http://windfanta.github.io/blog/2018/04/03/study-jquery-12/"/>
-    <id>http://windfanta.github.io/blog/2018/04/03/study-jquery-12/</id>
+    <link href="http://windfanta.github.io/2018/04/03/study-jquery-12/"/>
+    <id>http://windfanta.github.io/2018/04/03/study-jquery-12/</id>
     <published>2018-04-03T01:41:16.000Z</published>
     <updated>2018-07-30T01:01:30.075Z</updated>
     
@@ -109,17 +109,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>HTML, CSS 요약(사내공유용)</title>
-    <link href="http://windfanta.github.io/blog/2018/03/30/study-css/"/>
-    <id>http://windfanta.github.io/blog/2018/03/30/study-css/</id>
+    <link href="http://windfanta.github.io/2018/03/30/study-css/"/>
+    <id>http://windfanta.github.io/2018/03/30/study-css/</id>
     <published>2018-03-30T07:21:49.000Z</published>
     <updated>2018-07-30T01:01:30.066Z</updated>
     
@@ -135,17 +135,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="CSS" scheme="http://windfanta.github.io/blog/categories/study/CSS/"/>
+      <category term="CSS" scheme="http://windfanta.github.io/categories/study/CSS/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 2 CH7 이벤트 다루기</title>
-    <link href="http://windfanta.github.io/blog/2018/03/22/study-jquery-11/"/>
-    <id>http://windfanta.github.io/blog/2018/03/22/study-jquery-11/</id>
+    <link href="http://windfanta.github.io/2018/03/22/study-jquery-11/"/>
+    <id>http://windfanta.github.io/2018/03/22/study-jquery-11/</id>
     <published>2018-03-22T01:42:45.000Z</published>
     <updated>2018-07-30T01:01:30.075Z</updated>
     
@@ -160,17 +160,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 2 CH5~6 스타일, 속성 다루기</title>
-    <link href="http://windfanta.github.io/blog/2018/03/19/study-jquery-10/"/>
-    <id>http://windfanta.github.io/blog/2018/03/19/study-jquery-10/</id>
+    <link href="http://windfanta.github.io/2018/03/19/study-jquery-10/"/>
+    <id>http://windfanta.github.io/2018/03/19/study-jquery-10/</id>
     <published>2018-03-19T07:27:11.000Z</published>
     <updated>2018-07-30T01:01:30.074Z</updated>
     
@@ -185,17 +185,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 2 CH02 jQuery 소개</title>
-    <link href="http://windfanta.github.io/blog/2018/03/05/study-jquery-9/"/>
-    <id>http://windfanta.github.io/blog/2018/03/05/study-jquery-9/</id>
+    <link href="http://windfanta.github.io/2018/03/05/study-jquery-9/"/>
+    <id>http://windfanta.github.io/2018/03/05/study-jquery-9/</id>
     <published>2018-03-05T02:36:40.000Z</published>
     <updated>2018-07-30T01:01:30.079Z</updated>
     
@@ -210,17 +210,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>(vue.js) - 08 사용자 정의 이벤트</title>
-    <link href="http://windfanta.github.io/blog/2018/02/25/study-vue-8/"/>
-    <id>http://windfanta.github.io/blog/2018/02/25/study-vue-8/</id>
+    <link href="http://windfanta.github.io/2018/02/25/study-vue-8/"/>
+    <id>http://windfanta.github.io/2018/02/25/study-vue-8/</id>
     <published>2018-02-25T05:56:59.000Z</published>
     <updated>2018-07-30T01:01:30.084Z</updated>
     
@@ -236,17 +236,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="vue.js" scheme="http://windfanta.github.io/blog/categories/study/vue-js/"/>
+      <category term="vue.js" scheme="http://windfanta.github.io/categories/study/vue-js/"/>
     
     
   </entry>
   
   <entry>
     <title>scss</title>
-    <link href="http://windfanta.github.io/blog/2018/02/20/study-sass-1/"/>
-    <id>http://windfanta.github.io/blog/2018/02/20/study-sass-1/</id>
+    <link href="http://windfanta.github.io/2018/02/20/study-sass-1/"/>
+    <id>http://windfanta.github.io/2018/02/20/study-sass-1/</id>
     <published>2018-02-20T01:33:18.000Z</published>
     <updated>2018-07-30T01:01:30.081Z</updated>
     
@@ -261,17 +261,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="scss" scheme="http://windfanta.github.io/blog/categories/study/scss/"/>
+      <category term="scss" scheme="http://windfanta.github.io/categories/study/scss/"/>
     
     
   </entry>
   
   <entry>
     <title>(vue.js) - 07 컴포넌트</title>
-    <link href="http://windfanta.github.io/blog/2018/02/14/study-vue-7/"/>
-    <id>http://windfanta.github.io/blog/2018/02/14/study-vue-7/</id>
+    <link href="http://windfanta.github.io/2018/02/14/study-vue-7/"/>
+    <id>http://windfanta.github.io/2018/02/14/study-vue-7/</id>
     <published>2018-02-14T07:16:41.000Z</published>
     <updated>2018-07-30T01:01:30.084Z</updated>
     
@@ -287,17 +287,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="vue.js" scheme="http://windfanta.github.io/blog/categories/study/vue-js/"/>
+      <category term="vue.js" scheme="http://windfanta.github.io/categories/study/vue-js/"/>
     
     
   </entry>
   
   <entry>
     <title>(vue.js) - 06 필터</title>
-    <link href="http://windfanta.github.io/blog/2018/02/13/study-vue-6/"/>
-    <id>http://windfanta.github.io/blog/2018/02/13/study-vue-6/</id>
+    <link href="http://windfanta.github.io/2018/02/13/study-vue-6/"/>
+    <id>http://windfanta.github.io/2018/02/13/study-vue-6/</id>
     <published>2018-02-13T11:16:52.000Z</published>
     <updated>2018-07-30T01:01:30.083Z</updated>
     
@@ -313,17 +313,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="vue.js" scheme="http://windfanta.github.io/blog/categories/study/vue-js/"/>
+      <category term="vue.js" scheme="http://windfanta.github.io/categories/study/vue-js/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - PART3 - CH04 ~ 05 Date, Array 클래스</title>
-    <link href="http://windfanta.github.io/blog/2018/02/12/study-jquery-8/"/>
-    <id>http://windfanta.github.io/blog/2018/02/12/study-jquery-8/</id>
+    <link href="http://windfanta.github.io/2018/02/12/study-jquery-8/"/>
+    <id>http://windfanta.github.io/2018/02/12/study-jquery-8/</id>
     <published>2018-02-12T10:19:03.000Z</published>
     <updated>2018-07-30T01:01:30.078Z</updated>
     
@@ -338,17 +338,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - PART2 - CH03 함수 중급</title>
-    <link href="http://windfanta.github.io/blog/2018/01/31/study-jquery-7/"/>
-    <id>http://windfanta.github.io/blog/2018/01/31/study-jquery-7/</id>
+    <link href="http://windfanta.github.io/2018/01/31/study-jquery-7/"/>
+    <id>http://windfanta.github.io/2018/01/31/study-jquery-7/</id>
     <published>2018-01-31T10:20:27.000Z</published>
     <updated>2018-07-30T01:01:30.077Z</updated>
     
@@ -363,17 +363,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>처음 만나는 파이썬 - Chapter2</title>
-    <link href="http://windfanta.github.io/blog/2018/01/26/study-python-1/"/>
-    <id>http://windfanta.github.io/blog/2018/01/26/study-python-1/</id>
+    <link href="http://windfanta.github.io/2018/01/26/study-python-1/"/>
+    <id>http://windfanta.github.io/2018/01/26/study-python-1/</id>
     <published>2018-01-26T00:50:55.000Z</published>
     <updated>2018-07-30T01:01:30.080Z</updated>
     
@@ -388,17 +388,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="python" scheme="http://windfanta.github.io/blog/categories/study/python/"/>
+      <category term="python" scheme="http://windfanta.github.io/categories/study/python/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - PART2 - CH01 함수 기초</title>
-    <link href="http://windfanta.github.io/blog/2018/01/24/study-jquery-6/"/>
-    <id>http://windfanta.github.io/blog/2018/01/24/study-jquery-6/</id>
+    <link href="http://windfanta.github.io/2018/01/24/study-jquery-6/"/>
+    <id>http://windfanta.github.io/2018/01/24/study-jquery-6/</id>
     <published>2018-01-24T06:06:16.000Z</published>
     <updated>2018-07-30T01:01:30.077Z</updated>
     
@@ -413,17 +413,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - AD2 - 초보자를 위한 jQuery</title>
-    <link href="http://windfanta.github.io/blog/2018/01/11/study-jquery-4/"/>
-    <id>http://windfanta.github.io/blog/2018/01/11/study-jquery-4/</id>
+    <link href="http://windfanta.github.io/2018/01/11/study-jquery-4/"/>
+    <id>http://windfanta.github.io/2018/01/11/study-jquery-4/</id>
     <published>2018-01-11T00:50:54.000Z</published>
     <updated>2018-07-30T01:01:30.076Z</updated>
     
@@ -438,17 +438,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - CH2 - 기본 연산자</title>
-    <link href="http://windfanta.github.io/blog/2018/01/07/study-jquery-2/"/>
-    <id>http://windfanta.github.io/blog/2018/01/07/study-jquery-2/</id>
+    <link href="http://windfanta.github.io/2018/01/07/study-jquery-2/"/>
+    <id>http://windfanta.github.io/2018/01/07/study-jquery-2/</id>
     <published>2018-01-07T07:29:53.000Z</published>
     <updated>2018-07-30T01:01:30.075Z</updated>
     
@@ -463,17 +463,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - CH2 - 조건문 if</title>
-    <link href="http://windfanta.github.io/blog/2018/01/03/study-jquery-5/"/>
-    <id>http://windfanta.github.io/blog/2018/01/03/study-jquery-5/</id>
+    <link href="http://windfanta.github.io/2018/01/03/study-jquery-5/"/>
+    <id>http://windfanta.github.io/2018/01/03/study-jquery-5/</id>
     <published>2018-01-03T06:46:11.000Z</published>
     <updated>2018-07-30T01:01:30.076Z</updated>
     
@@ -488,17 +488,17 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
     
     
   </entry>
   
   <entry>
     <title>자바스크립트 jquery 완전정복 스터디 1 - AD1 - 초보자를 위한 함수와 클래스</title>
-    <link href="http://windfanta.github.io/blog/2018/01/03/study-jquery-3/"/>
-    <id>http://windfanta.github.io/blog/2018/01/03/study-jquery-3/</id>
+    <link href="http://windfanta.github.io/2018/01/03/study-jquery-3/"/>
+    <id>http://windfanta.github.io/2018/01/03/study-jquery-3/</id>
     <published>2018-01-03T06:46:11.000Z</published>
     <updated>2018-07-30T01:01:30.075Z</updated>
     
@@ -513,9 +513,9 @@
     
     </summary>
     
-      <category term="study" scheme="http://windfanta.github.io/blog/categories/study/"/>
+      <category term="study" scheme="http://windfanta.github.io/categories/study/"/>
     
-      <category term="jquery" scheme="http://windfanta.github.io/blog/categories/study/jquery/"/>
+      <category term="jquery" scheme="http://windfanta.github.io/categories/study/jquery/"/>
     
     
   </entry>
