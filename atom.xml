@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>windfanta.github.io/blog/</title>
+  <title>windfanta.github.io/blog</title>
   
   
-  <link href="/blog/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
   <link href="http://windfanta.github.io/blog/"/>
   <updated>2018-07-30T02:08:18.021Z</updated>
