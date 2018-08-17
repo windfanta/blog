@@ -27,6 +27,7 @@
 </blockquote>
 <p><br></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name1 = <span class="string">'신성민'</span>;      <span class="comment">// ok</span></span><br><span class="line"><span class="keyword">var</span> name2 = <span class="string">'신성민2'</span>      <span class="comment">// ok</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(name1, name2);      <span class="comment">// ok</span></span><br><span class="line"><span class="built_in">console</span>.log(name1, name2)       <span class="comment">// ok</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
 <p>[ 예제 1 - 여러분의 나이가 담긴 변수 age를 만들어주세요 ]<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">37</span>;</span><br></pre></td></tr></table></figure></p>
 <p><br></p>
 <h3 id="02-변수-여러개-만들기"><a href="#02-변수-여러개-만들기" class="headerlink" title="02_변수 여러개 만들기"></a>02_변수 여러개 만들기</h3><p>방법01_ var를 이용해서 여러 줄로 변수 구분을 하는 경우</p>
@@ -38,7 +39,7 @@
 <ul>
 <li>숫자로 시작하면 안됨</li>
 <li>대, 소문자의 구분</li>
-<li>변수는 대문자가 아닌 소문자로 시작하세요<br>(첫글자가 대문자인 경우는 통상적으로 생성자 함수를 뜻하기 때문)</li>
+<li>변수는 대문자가 아닌 소문자로 시작하세요<br>(첫글자가 대문자인 경우는 통상적으로 생성자 함수(클래스)를 뜻하기 때문)</li>
 <li>변하지 않는 환경 변수의 값을 담는 상수 변수는 모두 대문자로 만들어 주세요<br>(JS에서는 es6전까지 상수가 존재하지 않으므로 네이밍 규칙으로 구분)</li>
 <li>여러 단어가 조합되는 경우 다음과 같이 낙타 표기법(camelCase)으로 작성해주세요</li>
 <li>자바스크립트에서 이미 정의된 예약어(키워드)를 사용하면 안되요(P17참고) </li>
@@ -57,23 +58,21 @@
 <p><br></p>
 <p><strong>원시형, 참조형</strong><br>JS에서의 값은 원시형(primitive type)과 참조형(reference type) 두가지 자료형을 제공합니다.<br><strong>원시형은 변수에 할당될 때 값 그 자체(원시 데이터 값)를 보관하고 참조형은 참조 타입의 데이터의 주소를 저장합니다.</strong></p>
 <blockquote>
-<p>기본 데이터 타입(원시형)</p>
 <ul>
+<li>기본 데이터 타입(원시형)<ol>
 <li>숫자(Number)</li>
 <li>문자열(String)</li>
 <li>불린값(Boolean)</li>
 <li>undefined</li>
 <li>null</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>참조형</p>
-<ul>
-<li>Object(객체)<ul>
+</ol>
+</li>
+<li>참조형<ol>
+<li>Object(객체)</li>
 <li>배열(Array)</li>
 <li>함수(function)</li>
 <li>정규표현식(RegExp)</li>
-</ul>
+</ol>
 </li>
 </ul>
 </blockquote>
@@ -95,7 +94,7 @@
 </blockquote>
 <p>위에서 다뤘던 것처럼 우측에 변수를 두면 변수 자체가 넘어가는 것이 아니라 변수 안에 들어 있는 데이터가 복사되어 좌측 변수에 저장 됩니다.</p>
 <blockquote>
-<p>메모_<br>좀 더 정확히 설명하자면 변수 안에 들어있는 데이터 중 숫자, 문자, 논리 데이터만이 복사되며 아직 배우지 않은 배열 함수, 객체 데이터등은 실제 데이터가 들어있는 주소가 복사 됩니다.</p>
+<p>좀 더 정확히 설명하자면 변수 안에 들어있는 데이터 중 숫자, 문자, 논리 데이터(이하 원시형)는 복사되며 아직 배우지 않은 배열 함수, 객체 데이터등(이하 참조형)은 실제 데이터가 들어있는 주소가 복사 됩니다.</p>
 </blockquote>
 <p><br></p>
 <h3 id="02-함수-호출-시-변수를-매개변수-값으로-사용하는-경우"><a href="#02-함수-호출-시-변수를-매개변수-값으로-사용하는-경우" class="headerlink" title="02_함수 호출 시 변수를 매개변수 값으로 사용하는 경우"></a>02_함수 호출 시 변수를 매개변수 값으로 사용하는 경우</h3><iframe scrolling="no" width="100%" height="280px" src="//jsfiddle.net/a5L47p71/embedded/js,html,result/dark" frameborder="0" allowfullscreen></iframe>
