@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords"><title>Angular essentials - 디렉티브 - windfanta.github.io/blog</title><link rel="stylesheet" href="/blog/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com/windfanta"><span>Github</span></a></li><li><a href="https://www.flickr.com/photos/69582358@N06/"><span>flickr</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">Angular essentials - 디렉티브</h1><ul class="meta"><li><i class="icon icon-author"></i>SUNGMIN SHIN</li><li><i class="icon icon-clock"></i>10 Minutes</li><li><i class="icon icon-calendar"></i>2018년 9월 18일</li></ul></div></div><div class="article-content" style="max-width:800px"><h1 id="Angular-essentials"><a href="#Angular-essentials" class="headerlink" title="Angular essentials"></a>Angular essentials</h1><p>(<a href="https://book.naver.com/bookdb/book_detail.nhn?bid=13761643" target="_blank" rel="noopener">https://book.naver.com/bookdb/book_detail.nhn?bid=13761643</a>)</p>
+<p><br></p>
+<h2 id="08-디렉티브"><a href="#08-디렉티브" class="headerlink" title="08. 디렉티브"></a>08. 디렉티브</h2><p><br></p>
+<h3 id="8-1-디렉티브란"><a href="#8-1-디렉티브란" class="headerlink" title="8.1 디렉티브란?"></a>8.1 디렉티브란?</h3><p>디렉티브(Directive, 지시자)는 DOM의 모든 것(모양이나 동작 등)을 관리하기 위한 지시(명령)로 HTML 요소 또는 어트리뷰트의 형태로 디렉티브가 사용된 요소에게 무언가를 하라는 지시(Directive)를 전달한다.</p>
+<p><strong>디렉티브는 애플리케이션 전역에서 사용할 수 있는 공통 관심사를 컴포넌트에서 분리하여 구현한 것으로 컴포넌트의 복잡도를 낮추고 가독성을 향상시킨다.</strong><br><strong>(컴포넌트도 뷰를 생성하고 이벤트를 처리하는 등의 DOM을 관리하기 때문에 큰 의미에서는 디렉티브로 볼 수 있다.)</strong></p>
+<p>컴포넌트는 뷰를 구성하는 독립적인 구성요소로서 다른 컴포넌트에 직접적인 관심을 두지 않지만 디렉티브는 보편적이며 애플리케이션 전역에서 공통으로 사용 가능한 고유의 관심사를 기능으로 구현한다.<br>(즉 컴포넌트는 뷰 단위의 관심사를 가지고 있다고 하면 디렉티브는 DOM 요소의 공통 기능에 관심을 갖는다.) <strong>디렉티브는 단일 책임 원칙(Single Responsibility, Principle)에 의해 복합적인 기능보다는 여러 요소에서 공통적, 반복적으로 사용될 하나의 기능을 명확히 구현하는 것이 바람직하다.</strong></p>
+<p>디렉티브는 컴포넌트와 달리 뷰를 가지고 있지 않기 때문에 자식을 가질 수 없다. 다시 말해 컴포넌트는 자식 컴포넌트, 디렉티브. 파이프, 서비스등을 조합하여 뷰를 만들지만 디렉티브는 부모가 될 수 없고 컴포넌트에 의해 사용될 뿐이다.</p>
+<p>디렉티브는 DOM 요소 또는 어트리뷰트와 유사하게 의미를 갖는 이름으로 표현된다. 이때 로직은 드러나지 않으며 단지 디렉티브를 순서에 맞게 배치한다. 이를 ‘선언형 프로그래밍(Devalarative Programming)이라고 한다.</p>
+<p>디렉티브는 @Directive 데코레이터로 장식된 클래스로 디렉티브의 설정 정보가 기술된 메타데이터를 인자로 전달받아 디렉티브를 생성한다.</p>
+<blockquote>
+<p>정리</p>
+<ol>
+<li>디렉티브는 애플리케이션 전역에서 사용할 수 있는 공통 관심사를 컴포넌트에서 분리하여 구현한 것</li>
+<li>뷰를 구성하는 독립적인 구성요소로 애플리케이션 전역에서 공통으로 사용 가능한 고유의 관심사를 기능으로 구현</li>
+<li>디렉티브는 복합적인 기능보다는 여러 요소에서 공통, 반복적으로 사용될 하나의 기능을 명확히 구현하는 것이 바람직하다.</li>
+</ol>
+</blockquote>
+<p><br></p>
+<h3 id="8-2-디렉티브의-종류"><a href="#8-2-디렉티브의-종류" class="headerlink" title="8.2 디렉티브의 종류"></a>8.2 디렉티브의 종류</h3><p>Angular는 아래와 같이 3가지 유형의 디렉티브를 제공한다.</p>
+<blockquote>
+<ol>
+<li>컴포넌트 디렉티브(Component Directive)<br>컴포넌트의 템플릿을 표시하기 위한 디렉티브로 @Component 데코레이터의 메타 데이터 객체의 selector 프로퍼티에서 임의의 디렉티브 이름을 정의한다.</li>
+<li>어트리뷰트 디렉티브(Attribute Directive)<br>어트리뷰트 디렉티브는 DOM 요소의 어트리뷰트로 사용하여 해당 요소의 모양이나 동작을 제어한다. ngClass, ngStyle과 같은 빌트인 디렉티브가 있다.</li>
+<li>구조 디렉티브(Structual Directive)<br>구조 디렉티브는 DOM 요소를 반복 생성(ngFor), 조건에 의한 추가 또는 제거(ngIf, ngSwitch)를 통해 DOM 레이아웃을 변경한다.</li>
+</ol>
+</blockquote>
+<p>이 외에 사용자 정의 디렉티브가 있는 데 이 것은 사용자가 직접 정의하는 디렉티브이다.</p>
+<p><br></p>
+<h3 id="8-3-사용자-정의-어트리뷰트-디렉티브"><a href="#8-3-사용자-정의-어트리뷰트-디렉티브" class="headerlink" title="8.3 사용자 정의 어트리뷰트 디렉티브"></a>8.3 사용자 정의 어트리뷰트 디렉티브</h3><h4 id="8-3-1-사용자-정의-어트리뷰트-디렉티브-생성"><a href="#8-3-1-사용자-정의-어트리뷰트-디렉티브-생성" class="headerlink" title="8.3.1 사용자 정의 어트리뷰트 디렉티브 생성"></a>8.3.1 사용자 정의 어트리뷰트 디렉티브 생성</h4><p>angular CLI를 통해 추가하는 경우 아래와 같이 입력</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng generate directive 디렉티브명</span><br></pre></td></tr></table></figure>
+<p>예제에서는 ‘textBlue’라는 이름으로 아래와 같이 생성합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng generate directive textBlue</span><br></pre></td></tr></table></figure>
+<p>그리고 생성된 디렉티브를 아래와 같이 수정합니다.</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// text-blue.directive.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; Directive, ElementRef &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1 - 디렉티브의 식별자를 @Directive 메타데이터 객체의 selector 프로퍼티에 지정</span></span><br><span class="line"><span class="meta">@Directive</span>(&#123;</span><br><span class="line">  selector: <span class="string">'[text-blue]'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> TextBlueDirective &#123;</span><br><span class="line">  <span class="comment">// 2 - 생성자 함수에 주입된 ElementRef는 컴포넌트의 호스트 요소를 반환</span></span><br><span class="line">  <span class="keyword">constructor</span>(<span class="params"></span></span><br><span class="line"><span class="params">    el: ElementRef</span></span><br><span class="line"><span class="params">  </span>) &#123;</span><br><span class="line">    el.nativeElement.style.color = <span class="string">'blue'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<p>디렉티브는 모듈에 둥록하여야한다. <strong>@NgModule 데코레이터의 메타데이터 객체의 declarations 프로퍼티에 생성한 디렉티브를 추가</strong> 한다.</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.module.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; BrowserModule &#125; <span class="keyword">from</span> <span class="string">'@angular/platform-browser'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; NgModule &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span></span><br><span class="line"><span class="keyword">import</span> &#123; AppComponent &#125; <span class="keyword">from</span> <span class="string">'./app.component.ts'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; TextBlueDirective &#125; <span class="keyword">from</span> <span class="string">'./text-blue.directive'</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@NgModule</span>(&#123;</span><br><span class="line">  declarations: [ AppComponent, TextBlueDirective ],</span><br><span class="line">  imports: [ BrowserModule ],</span><br><span class="line">  providers: [],</span><br><span class="line">  bootstrap: [ AppComponent ]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppModule &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<p>디렉티브를 모듈에 등록하면 컴포넌트에서 사용할 수 있다. textBlue 디렉티브를 p 요소에 아래와 같이 적용해보자. (이때 textBlue 디렉티브가 선언된 요소(P)는 어트리뷰트 호스트 요소가 된다.)</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.component.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'app-root'</span>,</span><br><span class="line">  template: <span class="string">`</span></span><br><span class="line"><span class="string">    '&lt;p textBlue&gt;textBlue directive&lt;/p&gt; &lt;!-- 여기서 p가 어트리뷰트 호스트 요소 --&gt;</span></span><br><span class="line"><span class="string">  `</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>(‘text-blue.directive.ts’ 참고)<br><strong>1 - </strong> 디렉티브는 @Directive 데코레이터로 장식된 순수한 자바스크립트 클래스이다. @Directive 데코레이터의 메타 데이터 객체에 디렉티브에 필요한 정보를 설정한다. selector 프로퍼티에는 CSS셀렉터 문법과 동일하게 디렉티브가 적용되는 조건을 설정할 수 있다.</p>
+<table>
+<thead>
+<tr>
+<th>selector 프로퍼티</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>selector: ‘foo’</td>
+<td>foo 요소(element)에 디렉티브가 적용</td>
+</tr>
+<tr>
+<td>selector: ‘.foo’</td>
+<td>.foo 클래스가 선언된 요소에 디렉티브 적용</td>
+</tr>
+<tr>
+<td>selector: ‘[foo]’</td>
+<td>foo 어트리뷰트가 선언된 요소에 디렉티브가 적용</td>
+</tr>
+<tr>
+<td>selector: ‘[foo=bar]’</td>
+<td>foo 어트리뷰트의 값이 bar로 선언된 요소에 디렉티브가 적용</td>
+</tr>
+<tr>
+<td>selector: ‘:not(foo)’</td>
+<td>foo 요소가 아닌 모든 요소에 디렉티브가 적용</td>
+</tr>
+<tr>
+<td>selector: ‘foo, bar’</td>
+<td>foo 또는 bar 요소에 디렉티브가 적용</td>
+</tr>
+</tbody>
+</table>
+<p>디렉티브는 selec</p>
+</div><div class="article-meta" style="max-width:800px"><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/">study</a><span class="category-list-count">39</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/angular/">angular</a><span class="category-list-count">4</span></li></ul></li></ul></div></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/blog/2018/10/01/study-javascript-hofunc/"><i class="icon icon-arror-left"></i></a></li><li><a href="/blog/2018/07/27/study-angular-essential-7/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/windfanta" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="https://www.flickr.com/photos/69582358@N06/" title="flickr" target="_blank"><i class="icon icon-flickr"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 windfanta.github.io/blog<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>
