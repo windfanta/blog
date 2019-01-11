@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords"><title>CSS Naming - SMACSS, BEM, OOCSS - windfanta.github.io/blog</title><link rel="stylesheet" href="/blog/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com/windfanta"><span>Github</span></a></li><li><a href="https://www.flickr.com/photos/69582358@N06/"><span>flickr</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg"><div class="post-title"><h1 class="title">CSS Naming - SMACSS, BEM, OOCSS</h1><ul class="meta"><li><i class="icon icon-author"></i>SUNGMIN SHIN</li><li><i class="icon icon-clock"></i>11 Minutes</li><li><i class="icon icon-calendar"></i>2018년 10월 16일</li></ul></div></div><div class="article-content" style="max-width:800px"><!--
+  네이밍의 일관되고 체계적인 방법의 필요성(방법론)
+  모듈성, 확장성, 유지보수성을 고려한 설계 방법들 중 아래 세가지를 봄
+
+-->
+<h1 id="CSS-Naming-SMACSS-BEM-OOCSS"><a href="#CSS-Naming-SMACSS-BEM-OOCSS" class="headerlink" title="CSS Naming - SMACSS, BEM, OOCSS"></a>CSS Naming - SMACSS, BEM, OOCSS</h1><p><br></p>
+<h2 id="SMACSS-Scalable-and-Modular-Architecture-for-CSS"><a href="#SMACSS-Scalable-and-Modular-Architecture-for-CSS" class="headerlink" title="SMACSS (Scalable and Modular Architecture for CSS)"></a><a href="https://smacss.com/" target="_blank" rel="noopener">SMACSS</a> (Scalable and Modular Architecture for CSS)</h2><p>SMACSS는 스타일을 다섯가지로 분류하고 각 유형에 맞는 선택자(selector)와 작명법(naming convention), 코딩 기법을 제시 함</p>
+<ol>
+<li>기본 (BASE)</li>
+<li>레이아웃 (Layout)</li>
+<li>모듈 (Module)</li>
+<li>상태 (States)</li>
+<li>테마 (Theme)</li>
+</ol>
+<p>폴더 구조 예시<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">SCSS</span><br><span class="line">  ㄴ 서비스명.scss (import 구문으로 이루어진 메인 파일)</span><br><span class="line">    ㄴ common</span><br><span class="line">      ㄴ _reset.scss</span><br><span class="line">      ㄴ _variables.scss</span><br><span class="line">    ㄴ import</span><br><span class="line">      ㄴ _페이지명.scss</span><br><span class="line">    ㄴ lib</span><br><span class="line">      ㄴ _외부라이브러리.scss</span><br></pre></td></tr></table></figure></p>
+<h2 id="0-공통-유의사항"><a href="#0-공통-유의사항" class="headerlink" title="0. 공통 유의사항"></a>0. 공통 유의사항</h2><ul>
+<li>ID 사용 금지</li>
+<li>!important 사용 금지</li>
+<li>class는 작업자가 이해할 수 있도록 의미있게 작명</li>
+</ul>
+<h2 id="1-기본-Base"><a href="#1-기본-Base" class="headerlink" title="1. 기본(Base)"></a>1. 기본(Base)</h2><ul>
+<li>기본 스타일(reset, variables, mixins 등등)</li>
+</ul>
+<p><br></p>
+<h2 id="2-레이아웃-Layout"><a href="#2-레이아웃-Layout" class="headerlink" title="2. 레이아웃 (Layout)"></a>2. 레이아웃 (Layout)</h2><ul>
+<li>페이지의 레이아웃과 관련된 스타일을 정의(EX&gt; header, footer 등등)</li>
+<li>선택자는 ID나 CLASS를 사용(단 ID는 신중하게 사용)</li>
+<li>CLASS명 앞에 접미사 ‘l-‘을 붙여서 작명</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#content</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-id">#aside</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">20%</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.l-fixed</span> <span class="selector-id">#content</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">  <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.l-fixed</span> <span class="selector-id">#aside</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="3-모듈-Module"><a href="#3-모듈-Module" class="headerlink" title="3. 모듈 (Module)"></a>3. 모듈 (Module)</h2><ul>
+<li>Block, Element, Module과 관련된 스타일 정의</li>
+<li>스타일 재 사용을 위한 요소 (EX&gt; nav, widget, icons, tables등등)</li>
+<li>선택자는 재사용 가능 요소이기 때문에 ID와 element의 사용을 금한다. (단 element에 한정하여 자식 선택자를 사용)</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"forder"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span>&gt;</span>Forder Name<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.folder</span> &gt; <span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">padding-left</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(icon.png);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="4-상태-State"><a href="#4-상태-State" class="headerlink" title="4. 상태 (State)"></a>4. 상태 (State)</h2><ul>
+<li>접두사 ‘is-‘를 붙여 작명</li>
+<li>상태를 나타내는 스타일을 정의 (EX&gt; is-error / is-on)</li>
+<li>다른 스타일에 덧붙이거나 단독으로 사용 특정 모듈에 한정되는 상태의 경우 모듈의 이름을 뒤에 붙인다. (EX&gt; is-nav-on)</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"btn_area"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"btn btn_good is-active"</span>&gt;</span>좋아요버튼<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"btn btn_bad"</span>&gt;</span>나빠요버튼<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.btn</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">background</span>:<span class="number">#ddd</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>:<span class="number">4px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.btn</span><span class="selector-class">.is-active</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>:<span class="number">#43f837</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.btn</span><span class="selector-class">.is-hidden</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="5-테마-theme"><a href="#5-테마-theme" class="headerlink" title="5. 테마 (theme)"></a>5. 테마 (theme)</h2><ul>
+<li>적용 범위가 넓은 테마는 접두사 ‘theme-‘를 접두어로 붙여 구분한다.</li>
+<li>사용자가 테마를 선택할 수 있는 경우를 염두에 두고 색상, 이미지 등 look &amp; feel 제어</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mod</span> &#123;</span><br><span class="line"> <span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.mod</span><span class="selector-class">.theme-default</span> &#123;</span><br><span class="line">  <span class="attribute">border-color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="BEM-Block-Element-Module"><a href="#BEM-Block-Element-Module" class="headerlink" title="BEM (Block, Element, Module)"></a>BEM (Block, Element, Module)</h2><ul>
+<li>BEM은 Block Element Modifier의 약자</li>
+<li>ID는 사용할 수 없고, 오직 class명만 사용 (.header__navigation‐‐secondary과 같은 class를 사용)</li>
+</ul>
+<p><br></p>
+<h3 id="Block"><a href="#Block" class="headerlink" title="Block"></a>Block</h3><ul>
+<li>Block은 문단 전체에 적용된 element 또는 element를 담고 있는 컨테이너를 말함<br>(EX&gt; logo, login form, menu 등등)</li>
+</ul>
+<blockquote>
+<p>참고<br><a href="http://wit.nts-corp.com/2015/04/16/3538" target="_blank" rel="noopener"> WIT: CSS방법론 - SMACSS, BEM, OOCSS</a><br><a href="https://tech.lezhin.com/2018/08/20/challenge-css" target="_blank" rel="noopener"> 레진 기술 블로그 - 레진 챌린지 CSS 개발 후기 </a></p>
+</blockquote>
+</div><div class="article-meta" style="max-width:800px"><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/">study</a><span class="category-list-count">41</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/study/CSS/">CSS</a><span class="category-list-count">2</span></li></ul></li></ul></div></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/blog/2018/10/01/study-otnode1/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/windfanta" title="Github" target="_blank"><i class="icon icon-github"></i></a></li><li><a href="https://www.flickr.com/photos/69582358@N06/" title="flickr" target="_blank"><i class="icon icon-flickr"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2019 windfanta.github.io/blog<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>
